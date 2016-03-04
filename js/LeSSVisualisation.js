@@ -7,7 +7,7 @@ var paper = Raphael(50, 50, 1500, 1000);
 // x and y co-ordinates need to match
 
 //Centre block stats. Need to rename these variables
-var allRectangleHeight = 100;
+var allRectangleHeight = 50;
 var bevel = 10;
 var largeRectangleLength = 600;
 var smallRectangleLength = 300;
