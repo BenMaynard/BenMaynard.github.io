@@ -13,6 +13,18 @@ var largeRectangleLength = 600;
 var smallRectangleLength = 300;
 
 
+//Principle Pop-Up Text
+var largeScaleScrumIsScrumPopUpText = "test";
+var moreWithLeSSPopUpText = "";
+var transparencyPopUpText = "";
+var customerCentricPopUpText = "";
+var wholeProductFocusPopUpText = "";
+var continuousImprovementTowardsPerfectionPopUpText = "";
+var leanThinkingPopUpText = "";
+var systemsThinkingPopUpText = "";
+var empircalProcessControlPopUpText = "";
+var queueingTheoryleSSIsScrumPopUpText = "";
+
 // Product Backlog style info
 var productBacklogRefinementStyle = {
   fill: "#ddd",
@@ -168,7 +180,7 @@ var continousImprovementTowardsPerfectionText = paper.text(leftBarHorizontalPosi
 //.popup(x , y, location , size)
 
 continousImprovementTowardsPerfectionPopUp = paper.popup(leftBarHorizontalPosition, leftBarVerticalStartingPosition+50,
-	"Test text \n 	Shall I put these all in the same location? \n 	What are the limitations of this pop up? \n What can be tweaked via g.raphel? \n Can I Hi I m a Circle...:)"
+	" 3 Guide: Educate all Sites (LeSS Mult-Site)\n  3 Guide: Growing your Adoption (LeSS)"
 	, 'left', 5 ).hide();//paper.popup()
 continousImprovementTowardsPerfectionText.mouseover(function(){continousImprovementTowardsPerfectionPopUp.show(); });
 continousImprovementTowardsPerfectionText.mouseout(function(){continousImprovementTowardsPerfectionPopUp.hide(); });
@@ -182,7 +194,7 @@ var leanThinkingText = paper.text(leftBarHorizontalPosition+borderSideRectangleH
 .attr(borderFont).rotate( textRotation, 210, 125 );
 
 leanThinkingPopUp = paper.popup(leftBarHorizontalPosition, leftBarVerticalStartingPosition+300,
-	"Test text \n 	Shall I put these all in the same location? \n 	What are the limitations of this pop up? \n What can be tweaked via g.raphel? \n Can I Hi I m a Circle...:)"
+	" 5 Guide: Go See (LeSS) \n 3 Guide: Improvement Service (LeSS) \n 3 Guide: Job Safety, but not Role Safety (LeSS) \n 5 Guide: Managers are Optional (LeSS) \n 5 Guide: Managers as Teachers, and Learners (LeSS) \n 5 Guide: Theory Y Management  (LeSS) \n 5 Guide: Understand Taylor and Fayol (LeSS) \n "
 	, 'left', 5 ).hide();//paper.popup()
 leanThinkingText.mouseover(function(){leanThinkingPopUp.show(); });
 leanThinkingText.mouseout(function(){leanThinkingPopUp.hide(); });
@@ -221,7 +233,7 @@ var wholeProductFocusText = paper.text(rightBarHorizontalPosition + borderSideRe
 .attr(borderFont).rotate( textRotation, 870, 125 );
 
 wholeProductFocusPopUp = paper.popup(leftBarHorizontalPosition + 711, leftBarVerticalStartingPosition+300,
-	"Test text \n 	Shall I put these all in the same location? \n 	What are the limitations of this pop up? \n What can be tweaked via g.raphel? \n Can I Hi I m a Circle...:)"
+	" 6.5 Guide: Define your Product (LeSS) \n 3 Guide: Establish Clear Direction (LeSS) \n 6.5 Guide: Expanding Product Definition (LeSS) \n 2 Guide: Multiteam PBR (LeSS) \n 3 Guide: One Requirement Area at a Time (LeSS Huge) \n 10 Guide: Overall PBR (LeSS) \n 2 Guide: Overall PBR for shared understanding and alignment (LeSS) \n 4 Guide: Requirement Areas (LeSS Huge) \n 4 Guide: Seeing The Whole (LeSS) \n 6.5 Guide: What is Your Product? (LeSS) \n 2 Guide: Whole team refines (LeSS) \n "
 	, 'right', 5 ).hide();//paper.popup()
 wholeProductFocusText.mouseover(function(){wholeProductFocusPopUp.show(); });
 wholeProductFocusText.mouseout(function(){wholeProductFocusPopUp.hide(); });
@@ -234,7 +246,7 @@ var customerCentricText = paper.text(rightBarHorizontalPosition + (borderSideRec
 .attr(borderFont).rotate( textRotation, 870, 125 );
 
 customerCentricPopUp = paper.popup(leftBarHorizontalPosition + 711, leftBarVerticalStartingPosition+550,
-	"Test text \n 	Shall I put these all in the same location? \n 	What are the limitations of this pop up? \n What can be tweaked via g.raphel? \n Can I Hi I m a Circle...:)"
+	" 7 Guide: Don’t Be Nice  (LeSS) \n  8 Guide: More Outcomes, less Outputs  (LeSS) \n  7 Guide: Prioritization over Clarification (LeSS) \n  6.5 Guide: Product over Project or Program (LeSS) \n  2 Guide: Teams specialize in customer (not technical) areas (LeSS) \n  7 Guide: Who are those Users/Customers? (LeSS) \n"
 	, 'right', 5 ).hide();//paper.popup()
 customerCentricText.mouseover(function(){customerCentricPopUp.show(); });
 customerCentricText.mouseout(function(){customerCentricPopUp.hide(); });
@@ -248,7 +260,7 @@ var empircalProcessControl = paper.rect(bottomBarHorizontalStartingPosition, bot
 var empircalProcessControlText = paper.text(bottomBarHorizontalStartingPosition+175, bottomBarVerticalPosition+25, "Empirical Process Control").attr(borderFont);
 
 empircalProcessControlPopUp = paper.popup(leftBarHorizontalPosition, leftBarVerticalStartingPosition+712,
-	"Test text \n 	Shall I put these all in the same location? \n 	What are the limitations of this pop up? \n What can be tweaked via g.raphel? \n Can I Hi I m a Circle...:)"
+	" 5 Guide: LeSS Metrics with Less Targets (LeSS) \n "
 	, 'left', 5 ).hide();//paper.popup()
 empircalProcessControlText.mouseover(function(){empircalProcessControlPopUp.show(); });
 empircalProcessControlText.mouseout(function(){empircalProcessControlPopUp.hide(); });
@@ -260,7 +272,7 @@ var queueingTheory = paper.rect(bottomBarHorizontalStartingPosition+borderTopBot
 var queueingTheoryText = paper.text((bottomBarHorizontalStartingPosition*2)+275, bottomBarVerticalPosition+25, "Queueing Theory").attr(borderFont);
 
 queueingTheoryPopUp = paper.popup(leftBarHorizontalPosition + 711, leftBarVerticalStartingPosition+712,
-	"Test text \n 	Shall I put these all in the same location? \n 	What are the limitations of this pop up? \n What can be tweaked via g.raphel? \n Can I Hi I m a Circle...:)"
+	" 4 Guide: Transitioning to Feature Teams (LeSS Huge) \n 4 Guide: Understanding Feature Teams (LeSS) \n "
 	, 'right', 5 ).hide();//paper.popup()
 queueingTheoryText.mouseover(function(){queueingTheoryPopUp.show(); });
 queueingTheoryText.mouseout(function(){queueingTheoryPopUp.hide(); });
