@@ -13,65 +13,64 @@ var largeRectangleLength = 600;
 var smallRectangleLength = 300;
 
 /*
-//Principle Pop-Up Text
-var largeScaleScrumIsScrumPopUpText = "test";
-var moreWithLeSSPopUpText = "";
-var transparencyPopUpText = "";
-var customerCentricPopUpText = "";
-var wholeProductFocusPopUpText = "";
-var continuousImprovementTowardsPerfectionPopUpText = "";
-var leanThinkingPopUpText = "";
-var systemsThinkingPopUpText = "";
-var empircalProcessControlPopUpText = "";
-var queueingTheoryleSSIsScrumPopUpText = "";
-*/
+ //Principle Pop-Up Text
+ var largeScaleScrumIsScrumPopUpText = "test";
+ var moreWithLeSSPopUpText = "";
+ var transparencyPopUpText = "";
+ var customerCentricPopUpText = "";
+ var wholeProductFocusPopUpText = "";
+ var continuousImprovementTowardsPerfectionPopUpText = "";
+ var leanThinkingPopUpText = "";
+ var systemsThinkingPopUpText = "";
+ var empircalProcessControlPopUpText = "";
+ var queueingTheoryleSSIsScrumPopUpText = "";
+ */
 
 //Required event or artefact variables
 
 // Product Backlog style info
 var productBacklogRefinementStyle = {
-  fill: "#ddd",
-  stroke: "#aaa",
-  "stroke-width": 1,
-  "stroke-linejoin": "round",
-  cursor: "pointer"
+    fill: "#ddd",
+    stroke: "#aaa",
+    "stroke-width": 1,
+    "stroke-linejoin": "round",
+    cursor: "pointer"
 };
 
 // Design workshop style info
 var designWorkshopStyle = {
-  fill: "#99CCCC",
-  stroke: "#aaa",
-  "stroke-width": 1,
-  "stroke-linejoin": "round",
-  cursor: "pointer"
+    fill: "#99CCCC",
+    stroke: "#aaa",
+    "stroke-width": 1,
+    "stroke-linejoin": "round",
+    cursor: "pointer"
 };
 
 
 var sprintPlanningStyle = {
-  fill: "#ccffcc",
-  stroke: "#aaa",
-  "stroke-width": 1,
-  "stroke-linejoin": "round",
-  cursor: "pointer"
+    fill: "#ccffcc",
+    stroke: "#aaa",
+    "stroke-width": 1,
+    "stroke-linejoin": "round",
+    cursor: "pointer"
 };
 
 
 var communityStyle = {
-  fill: "#f2f2f2",
-  stroke: "#aaa",
-  "stroke-width": 1,
-  "stroke-linejoin": "round",
-  cursor: "pointer"
+    fill: "#f2f2f2",
+    stroke: "#aaa",
+    "stroke-width": 1,
+    "stroke-linejoin": "round",
+    cursor: "pointer"
 };
 
 var reviewReflectionStyle = {
-  fill: "#ccccff",
-  stroke: "#aaa",
-  "stroke-width": 1,
-  "stroke-linejoin": "round",
-  cursor: "pointer"
+    fill: "#ccccff",
+    stroke: "#aaa",
+    "stroke-width": 1,
+    "stroke-linejoin": "round",
+    cursor: "pointer"
 };
-
 
 
 //Principle Colours
@@ -80,15 +79,20 @@ var principleColour = "#A2D7E8";
 // X (horizontal position) ,Y (vertical position), width, height 
 
 //fonts
-var centreFont = {"font-family":"serif", "font-style":"regular", "font-size":"20"};
-var borderFont = {"font-family":"serif", "font-style":"regular", "font-size":"20"};
-var teamFont = {"font-family":"serif", "font-style":"regular", "font-size":"20"};
-var improvementBacklogCustomerValueFlowFont = {"font-family":"serif", "font-style":"regular", "font-size":"30", "letter-spacing":"25px"};
+var centreFont = {"font-family": "serif", "font-style": "regular", "font-size": "20"};
+var borderFont = {"font-family": "serif", "font-style": "regular", "font-size": "20"};
+var teamFont = {"font-family": "serif", "font-style": "regular", "font-size": "20"};
+var improvementBacklogCustomerValueFlowFont = {
+    "font-family": "serif",
+    "font-style": "regular",
+    "font-size": "30",
+    "letter-spacing": "25px"
+};
 
 //Border Rectangle Dimensions
 var borderSideRectangleHeight = 229;
 var borderSideRectangleWidth = 50; //top bar needs to be the sum of with side bar widths and the gap in between
-var borderTopBottomRectangleWidth = (660 + borderSideRectangleWidth)/2; //the 660 is the diff between the horizontal and vertical. need to add it as a clac but was playing up
+var borderTopBottomRectangleWidth = (660 + borderSideRectangleWidth) / 2; //the 660 is the diff between the horizontal and vertical. need to add it as a clac but was playing up
 var borderTopBottomRectangleHeight = 50;
 
 //Top Bar Horizontal and Vertical Positions
@@ -97,7 +101,7 @@ var topBarVerticalPosition = 100;
 
 //Bottom Bar Horizontal and Vertical Positions
 var bottomBarHorizontalStartingPosition = 250;
-var bottomBarVerticalPosition = borderTopBottomRectangleHeight + (borderSideRectangleHeight*3) + 100;
+var bottomBarVerticalPosition = borderTopBottomRectangleHeight + (borderSideRectangleHeight * 3) + 100;
 
 //Left Border Horizontal and Vertical Positions
 var leftBarHorizontalPosition = 250;
@@ -119,29 +123,32 @@ var textRotation = 90;
 var centreBoxesOffset = 5;
 
 //Centre box horizontal and vertical positions
-var fullWidthCentreBoxHorizontalPosition = leftBarHorizontalPosition + borderSideRectangleWidth + centreBoxesOffset;
-var fullWidthCentreBoxVerticalPosition = 100;
+var fullWidthCentreBoxHorizontalPosition;
+fullWidthCentreBoxHorizontalPosition = leftBarHorizontalPosition + borderSideRectangleWidth + centreBoxesOffset;
+var fullWidthCentreBoxVerticalPosition;
+fullWidthCentreBoxVerticalPosition = 100;
 
 //Improvement Backlog & Value Flow
-var improvementBacklog = paper.rect(200, 100, 810, 787)
-	.attr({fill: principleColour})
-	.attr({href: "http://less.works/less/management/improvement_service.html"});
-	
+var improvementBacklog;
+improvementBacklog = paper.rect(200, 100, 810, 787)
+    .attr({fill: principleColour})
+    .attr({href: "http://less.works/less/management/improvement_service.html"});
+
 var improvementBacklogText;
 improvementBacklogText = paper.text(leftBarHorizontalPosition + borderSideRectangleHeight + 50, leftBarVerticalStartingPosition + sideBarVerticalTextOffset, "Product Backlog")
     .attr(improvementBacklogCustomerValueFlowFont).rotate(textRotation, 162, 125)
     .attr({href: "http://less.works/less/management/improvement_service.html"});
 
-    paper.path([
-        'M',  985, 117,
-        'L',  985 , 885
-    ]).attr({
+paper.path([
+    'M', 985, 117,
+    'L', 985, 885
+]).attr({
         'stroke-width': 15,
         'stroke': ('white'),
         'arrow-end': 'block-midium-midium',
-        'arrow-start': 'oval-narrow-short'       
+        'arrow-start': 'oval-narrow-short'
     })
-   	.attr({href: "http://less.works/less/principles/lean-thinking.html#LeanThinking"});
+    .attr({href: "http://less.works/less/principles/lean-thinking.html#LeanThinking"});
 
 var customerValueFlowText;
 customerValueFlowText = paper.text(leftBarHorizontalPosition + borderSideRectangleHeight + 45, leftBarVerticalStartingPosition + sideBarVerticalTextOffset - 760, "Customer Value Flow")
@@ -149,284 +156,391 @@ customerValueFlowText = paper.text(leftBarHorizontalPosition + borderSideRectang
     .attr({href: "http://less.works/less/principles/lean-thinking.html#LeanThinking"});
 
 
-
 //Top Bar
 //Large Scale Scrum is Scrum. These text offsets need some work
-var largeScaleScrumIsScrum = paper.rect(topBarHorizontalStartingPosition, topBarVerticalPosition, borderTopBottomRectangleWidth, borderTopBottomRectangleHeight).attr({fill: principleColour});
-var largeScaleScrumIsScrumText = paper.text(topBarHorizontalStartingPosition+topBarHorizontalTextOffset, topBarVerticalPosition+topBarVerticalTextOffset +100, "Large Scale Scrum Is Scrum").attr(borderFont);
+var largeScaleScrumIsScrum;
+largeScaleScrumIsScrum = paper.rect(topBarHorizontalStartingPosition, topBarVerticalPosition, borderTopBottomRectangleWidth, borderTopBottomRectangleHeight).attr({fill: principleColour});
+var largeScaleScrumIsScrumText = paper.text(topBarHorizontalStartingPosition + topBarHorizontalTextOffset, topBarVerticalPosition + topBarVerticalTextOffset + 100, "Large Scale Scrum Is Scrum").attr(borderFont);
 // will animate the rectangle colour fade, needs more params .animate({fill: "principleColour"}, 2000);
 
 largeScaleScrumIsScrumPopUp = paper.popup(leftBarHorizontalPosition, leftBarVerticalStartingPosition - 25,
-	"Test text \n 	Shall I put these all in the same location? \n 	What are the limitations of this pop up? \n What can be tweaked via g.raphel? \n Can I Hi I m a Circle...:)"
-	, 'left', 5 ).hide();//paper.popup()
-largeScaleScrumIsScrumText.mouseover(function(){largeScaleScrumIsScrumPopUp.show(); });
-largeScaleScrumIsScrumText.mouseout(function(){largeScaleScrumIsScrumPopUp.hide(); });
+    "Test text \n 	Shall I put these all in the same location? \n 	What are the limitations of this pop up? \n What can be tweaked via g.raphel? \n Can I Hi I m a Circle...:)"
+    , 'left', 5).hide();//paper.popup()
+largeScaleScrumIsScrumText.mouseover(function () {
+    largeScaleScrumIsScrumPopUp.show();
+});
+largeScaleScrumIsScrumText.mouseout(function () {
+    largeScaleScrumIsScrumPopUp.hide();
+});
 
 
 //too much misuing of constants. Need to understand which ones can have the same values and which are not. Feel like i am in a half way house, some elements move easily others are too manual
 
 //Transparency. These text offsets need some work
-var transparency = paper.rect(topBarHorizontalStartingPosition+borderTopBottomRectangleWidth, topBarVerticalPosition, borderTopBottomRectangleWidth, borderTopBottomRectangleHeight).attr({fill: principleColour});;
-var transparencyText = paper.text((topBarHorizontalStartingPosition+350)+topBarHorizontalTextOffset, topBarVerticalPosition+topBarVerticalTextOffset + 100, "Transparency").attr(borderFont);
+var transparency;
+transparency = paper.rect(topBarHorizontalStartingPosition + borderTopBottomRectangleWidth, topBarVerticalPosition, borderTopBottomRectangleWidth, borderTopBottomRectangleHeight).attr({fill: principleColour});
+
+var transparencyText;
+transparencyText = paper.text((topBarHorizontalStartingPosition + 350) + topBarHorizontalTextOffset, topBarVerticalPosition + topBarVerticalTextOffset + 100, "Transparency").attr(borderFont);
 
 transparencyPopUp = paper.popup(leftBarHorizontalPosition + 711, leftBarVerticalStartingPosition - 25,
-	"Test text \n 	Shall I put these all in the same location? \n 	What are the limitations of this pop up? \n What can be tweaked via g.raphel? \n Can I Hi I m a Circle...:)"
-	, 'right', 5 ).hide();//paper.popup()
-transparencyText.mouseover(function(){transparencyPopUp.show(); });
-transparencyText.mouseout(function(){transparencyPopUp.hide(); });
+    "Test text \n 	Shall I put these all in the same location? \n 	What are the limitations of this pop up? \n What can be tweaked via g.raphel? \n Can I Hi I m a Circle...:)"
+    , 'right', 5).hide();//paper.popup()
+transparencyText.mouseover(function () {
+    transparencyPopUp.show();
+});
+transparencyText.mouseout(function () {
+    transparencyPopUp.hide();
+});
 
 
 //Left Bar
 //Continuous Improvement
-var continousImprovementTowardsPerfection= paper.rect(leftBarHorizontalPosition, leftBarVerticalStartingPosition, borderSideRectangleWidth, borderSideRectangleHeight).attr({fill: principleColour});;
+var continuousImprovementTowardsPerfection;
+continuousImprovementTowardsPerfection = paper.rect(leftBarHorizontalPosition, leftBarVerticalStartingPosition, borderSideRectangleWidth, borderSideRectangleHeight).attr({fill: principleColour});
 
-var continousImprovementTowardsPerfectionText = paper.text(leftBarHorizontalPosition + 100, leftBarVerticalStartingPosition+sideBarVerticalTextOffset, "Continous Improvement \n Towards Perfection")
-.attr(borderFont).rotate( textRotation, 210, 125 );
+
+var continuousImprovementTowardsPerfectionText = paper.text(leftBarHorizontalPosition + 100, leftBarVerticalStartingPosition + sideBarVerticalTextOffset, "continuous Improvement \n Towards Perfection")
+    .attr(borderFont).rotate(textRotation, 210, 125);
 
 //.popup(x , y, location , size)
 
-continousImprovementTowardsPerfectionPopUp = paper.popup(leftBarHorizontalPosition, leftBarVerticalStartingPosition+50,
-	" 3 Guide: Educate all Sites (LeSS Mult-Site)\n  3 Guide: Growing your Adoption (LeSS)"
-	, 'left', 5 ).hide();//paper.popup()
-continousImprovementTowardsPerfectionText.mouseover(function(){continousImprovementTowardsPerfectionPopUp.show(); });
-continousImprovementTowardsPerfectionText.mouseout(function(){continousImprovementTowardsPerfectionPopUp.hide(); });
-
-
+continuousImprovementTowardsPerfectionPopUp = paper.popup(leftBarHorizontalPosition, leftBarVerticalStartingPosition + 50,
+    " 3 Guide: Educate all Sites (LeSS Mult-Site)\n  3 Guide: Growing your Adoption (LeSS)"
+    , 'left', 5).hide();//paper.popup()
+continuousImprovementTowardsPerfectionText.mouseover(function () {
+    continuousImprovementTowardsPerfectionPopUp.show();
+});
+continuousImprovementTowardsPerfectionText.mouseout(function () {
+    continuousImprovementTowardsPerfectionPopUp.hide();
+});
 
 
 //Lean Thinking
-var leanThinking = paper.rect(leftBarHorizontalPosition, leftBarVerticalStartingPosition+borderSideRectangleHeight, borderSideRectangleWidth, borderSideRectangleHeight).attr({fill: principleColour});;
-var leanThinkingText = paper.text(leftBarHorizontalPosition+borderSideRectangleHeight +100, leftBarVerticalStartingPosition+sideBarVerticalTextOffset, "Lean Thinking	")
-.attr(borderFont).rotate( textRotation, 210, 125 );
+var leanThinking;
+leanThinking = paper.rect(leftBarHorizontalPosition, leftBarVerticalStartingPosition + borderSideRectangleHeight, borderSideRectangleWidth, borderSideRectangleHeight).attr({fill: principleColour});
 
-leanThinkingPopUp = paper.popup(leftBarHorizontalPosition, leftBarVerticalStartingPosition+300,
-	" 5 Guide: Go See (LeSS) \n 3 Guide: Improvement Service (LeSS) \n 3 Guide: Job Safety, but not Role Safety (LeSS) \n 5 Guide: Managers are Optional (LeSS) \n 5 Guide: Managers as Teachers, and Learners (LeSS) \n 5 Guide: Theory Y Management  (LeSS) \n 5 Guide: Understand Taylor and Fayol (LeSS) \n "
-	, 'left', 5 ).hide();//paper.popup()
-leanThinkingText.mouseover(function(){leanThinkingPopUp.show(); });
-leanThinkingText.mouseout(function(){leanThinkingPopUp.hide(); });
+var leanThinkingText;
+leanThinkingText = paper.text(leftBarHorizontalPosition + borderSideRectangleHeight + 100, leftBarVerticalStartingPosition + sideBarVerticalTextOffset, "Lean Thinking	")
+    .attr(borderFont).rotate(textRotation, 210, 125);
 
+leanThinkingPopUp = paper.popup(leftBarHorizontalPosition, leftBarVerticalStartingPosition + 300,
+    " 5 Guide: Go See (LeSS) \n 3 Guide: Improvement Service (LeSS) \n 3 Guide: Job Safety, but not Role Safety (LeSS) \n 5 Guide: Managers are Optional (LeSS) \n 5 Guide: Managers as Teachers, and Learners (LeSS) \n 5 Guide: Theory Y Management  (LeSS) \n 5 Guide: Understand Taylor and Fayol (LeSS) \n "
+    , 'left', 5).hide();//paper.popup()
+leanThinkingText.mouseover(function () {
+    leanThinkingPopUp.show();
+});
+leanThinkingText.mouseout(function () {
+    leanThinkingPopUp.hide();
+});
 
 
 //Systems Thinking
-var systemsThinking = paper.rect(leftBarHorizontalPosition, leftBarVerticalStartingPosition+(borderSideRectangleHeight*2), borderSideRectangleWidth, borderSideRectangleHeight).attr({fill: principleColour});;
-var systemsThinkingText = paper.text(leftBarHorizontalPosition+(borderSideRectangleHeight*2) +100, leftBarVerticalStartingPosition+sideBarVerticalTextOffset, "Systems Thinking	")
-.attr(borderFont).rotate( textRotation, 210, 125 );
+var systemsThinking;
+systemsThinking = paper.rect(leftBarHorizontalPosition, leftBarVerticalStartingPosition + (borderSideRectangleHeight * 2), borderSideRectangleWidth, borderSideRectangleHeight).attr({fill: principleColour});
 
-systemsThinkingPopUp = paper.popup(leftBarHorizontalPosition, leftBarVerticalStartingPosition+550,
-	"Test text \n 	Shall I put these all in the same location? \n 	What are the limitations of this pop up? \n What can be tweaked via g.raphel? \n Can I Hi I m a Circle...:)"
-	, 'left', 5 ).hide();//paper.popup()
-systemsThinkingText.mouseover(function(){systemsThinkingPopUp.show(); });
-systemsThinkingText.mouseout(function(){systemsThinkingPopUp.hide(); });
+var systemsThinkingText;
+systemsThinkingText = paper.text(leftBarHorizontalPosition + (borderSideRectangleHeight * 2) + 100, leftBarVerticalStartingPosition + sideBarVerticalTextOffset, "Systems Thinking	")
+    .attr(borderFont).rotate(textRotation, 210, 125);
 
+systemsThinkingPopUp = paper.popup(leftBarHorizontalPosition, leftBarVerticalStartingPosition + 550,
+    "Test text \n 	Shall I put these all in the same location? \n 	What are the limitations of this pop up? \n What can be tweaked via g.raphel? \n Can I Hi I m a Circle...:)"
+    , 'left', 5).hide();//paper.popup()
+systemsThinkingText.mouseover(function () {
+    systemsThinkingPopUp.show();
+});
+systemsThinkingText.mouseout(function () {
+    systemsThinkingPopUp.hide();
+});
 
 
 //Right Bar
 //More with LeSS
-var moreWithLeSS = paper.rect(rightBarHorizontalPosition, rightBarVerticalStartingPosition, borderSideRectangleWidth, borderSideRectangleHeight).attr({fill: principleColour});
-var moreWithLeSSText = paper.text(rightBarHorizontalPosition +100, rightBarVerticalStartingPosition+sideBarVerticalTextOffset, "More With LeSS")
-.attr(borderFont).rotate( textRotation, 870, 125 );
+var moreWithLeSS;
+moreWithLeSS = paper.rect(rightBarHorizontalPosition, rightBarVerticalStartingPosition, borderSideRectangleWidth, borderSideRectangleHeight).attr({fill: principleColour});
+var moreWithLeSSText;
+moreWithLeSSText = paper.text(rightBarHorizontalPosition + 100, rightBarVerticalStartingPosition + sideBarVerticalTextOffset, "More With LeSS")
+    .attr(borderFont).rotate(textRotation, 870, 125);
 
-moreWithLeSSPopUp = paper.popup(leftBarHorizontalPosition + 711, leftBarVerticalStartingPosition+50,
-	"Test text \n 	Shall I put these all in the same location? \n 	What are the limitations of this pop up? \n What can be tweaked via g.raphel? \n Can I Hi I m a Circle...:)"
-	, 'right', 5 ).hide();//paper.popup()
-moreWithLeSSText.mouseover(function(){moreWithLeSSPopUp.show(); });
-moreWithLeSSText.mouseout(function(){moreWithLeSSPopUp.hide(); });
+moreWithLeSSPopUp = paper.popup(leftBarHorizontalPosition + 711, leftBarVerticalStartingPosition + 50,
+    "Test text \n 	Shall I put these all in the same location? \n 	What are the limitations of this pop up? \n What can be tweaked via g.raphel? \n Can I Hi I m a Circle...:)"
+    , 'right', 5).hide();//paper.popup()
+moreWithLeSSText.mouseover(function () {
+    moreWithLeSSPopUp.show();
+});
+moreWithLeSSText.mouseout(function () {
+    moreWithLeSSPopUp.hide();
+});
 
 
 //Whole Product Focus
-var wholeProductFocus = paper.rect(rightBarHorizontalPosition, rightBarVerticalStartingPosition+borderSideRectangleHeight, borderSideRectangleWidth, borderSideRectangleHeight).attr({fill: principleColour});
-var wholeProductFocusText = paper.text(rightBarHorizontalPosition + borderSideRectangleHeight +100, rightBarVerticalStartingPosition+sideBarVerticalTextOffset, "Whole Product Focus")
-.attr(borderFont).rotate( textRotation, 870, 125 );
+var wholeProductFocus;
+wholeProductFocus = paper.rect(rightBarHorizontalPosition, rightBarVerticalStartingPosition + borderSideRectangleHeight, borderSideRectangleWidth, borderSideRectangleHeight).attr({fill: principleColour});
+var wholeProductFocusText;
+wholeProductFocusText = paper.text(rightBarHorizontalPosition + borderSideRectangleHeight + 100, rightBarVerticalStartingPosition + sideBarVerticalTextOffset, "Whole Product Focus")
+    .attr(borderFont).rotate(textRotation, 870, 125);
 
-wholeProductFocusPopUp = paper.popup(leftBarHorizontalPosition + 711, leftBarVerticalStartingPosition+300,
-	" 6.5 Guide: Define your Product (LeSS) \n 3 Guide: Establish Clear Direction (LeSS) \n 6.5 Guide: Expanding Product Definition (LeSS) \n 2 Guide: Multiteam PBR (LeSS) \n 3 Guide: One Requirement Area at a Time (LeSS Huge) \n 10 Guide: Overall PBR (LeSS) \n 2 Guide: Overall PBR for shared understanding and alignment (LeSS) \n 4 Guide: Requirement Areas (LeSS Huge) \n 4 Guide: Seeing The Whole (LeSS) \n 6.5 Guide: What is Your Product? (LeSS) \n 2 Guide: Whole team refines (LeSS) \n "
-	, 'right', 5 ).hide();//paper.popup()
-wholeProductFocusText.mouseover(function(){wholeProductFocusPopUp.show(); });
-wholeProductFocusText.mouseout(function(){wholeProductFocusPopUp.hide(); });
-
+wholeProductFocusPopUp = paper.popup(leftBarHorizontalPosition + 711, leftBarVerticalStartingPosition + 300,
+    " 6.5 Guide: Define your Product (LeSS) \n 3 Guide: Establish Clear Direction (LeSS) \n 6.5 Guide: Expanding Product Definition (LeSS) \n 2 Guide: Multiteam PBR (LeSS) \n 3 Guide: One Requirement Area at a Time (LeSS Huge) \n 10 Guide: Overall PBR (LeSS) \n 2 Guide: Overall PBR for shared understanding and alignment (LeSS) \n 4 Guide: Requirement Areas (LeSS Huge) \n 4 Guide: Seeing The Whole (LeSS) \n 6.5 Guide: What is Your Product? (LeSS) \n 2 Guide: Whole team refines (LeSS) \n "
+    , 'right', 5).hide();//paper.popup()
+wholeProductFocusText.mouseover(function () {
+    wholeProductFocusPopUp.show();
+});
+wholeProductFocusText.mouseout(function () {
+    wholeProductFocusPopUp.hide();
+});
 
 
 //Customer Centric
-var customerCentric = paper.rect(rightBarHorizontalPosition, rightBarVerticalStartingPosition+(borderSideRectangleHeight*2), borderSideRectangleWidth, borderSideRectangleHeight).attr({fill: principleColour});;
-var customerCentricText = paper.text(rightBarHorizontalPosition + (borderSideRectangleHeight*2) +100, rightBarVerticalStartingPosition+sideBarVerticalTextOffset, "Customer Centric")
-.attr(borderFont).rotate( textRotation, 870, 125 );
+var customerCentric;
+customerCentric = paper.rect(rightBarHorizontalPosition, rightBarVerticalStartingPosition + (borderSideRectangleHeight * 2), borderSideRectangleWidth, borderSideRectangleHeight).attr({fill: principleColour});
 
-customerCentricPopUp = paper.popup(leftBarHorizontalPosition + 711, leftBarVerticalStartingPosition+550,
-	" 7 Guide: Don�t Be Nice  (LeSS) \n  8 Guide: More Outcomes, less Outputs  (LeSS) \n  7 Guide: Prioritization over Clarification (LeSS) \n  6.5 Guide: Product over Project or Program (LeSS) \n  2 Guide: Teams specialize in customer (not technical) areas (LeSS) \n  7 Guide: Who are those Users/Customers? (LeSS) \n"
-	, 'right', 5 ).hide();//paper.popup()
-customerCentricText.mouseover(function(){customerCentricPopUp.show(); });
-customerCentricText.mouseout(function(){customerCentricPopUp.hide(); });
+var customerCentricText;
+customerCentricText = paper.text(rightBarHorizontalPosition + (borderSideRectangleHeight * 2) + 100, rightBarVerticalStartingPosition + sideBarVerticalTextOffset, "Customer Centric")
+    .attr(borderFont).rotate(textRotation, 870, 125);
 
+customerCentricPopUp = paper.popup(leftBarHorizontalPosition + 711, leftBarVerticalStartingPosition + 550,
+    " 7 Guide: Don't Be Nice  (LeSS) \n  8 Guide: More Outcomes, less Outputs  (LeSS) \n  7 Guide: Prioritization over Clarification (LeSS) \n  6.5 Guide: Product over Project or Program (LeSS) \n  2 Guide: Teams specialize in customer (not technical) areas (LeSS) \n  7 Guide: Who are those Users/Customers? (LeSS) \n"
+    , 'right', 5).hide();//paper.popup()
+customerCentricText.mouseover(function () {
+    customerCentricPopUp.show();
+});
+customerCentricText.mouseout(function () {
+    customerCentricPopUp.hide();
+});
 
 
 //Bottom Bar
 
 //Empirical Process Control. Need to sort our text offsets
-var empircalProcessControl = paper.rect(bottomBarHorizontalStartingPosition, bottomBarVerticalPosition, borderTopBottomRectangleWidth, borderTopBottomRectangleHeight).attr({fill: principleColour});;
-var empircalProcessControlText = paper.text(bottomBarHorizontalStartingPosition+175, bottomBarVerticalPosition+25, "Empirical Process Control").attr(borderFont);
+var empiricalProcessControl;
+empiricalProcessControl = paper.rect(bottomBarHorizontalStartingPosition, bottomBarVerticalPosition, borderTopBottomRectangleWidth, borderTopBottomRectangleHeight).attr({fill: principleColour});
 
-empircalProcessControlPopUp = paper.popup(leftBarHorizontalPosition, leftBarVerticalStartingPosition+712,
-	" 5 Guide: LeSS Metrics with Less Targets (LeSS) \n "
-	, 'left', 5 ).hide();//paper.popup()
-empircalProcessControlText.mouseover(function(){empircalProcessControlPopUp.show(); });
-empircalProcessControlText.mouseout(function(){empircalProcessControlPopUp.hide(); });
+var empiricalProcessControlText;
+empiricalProcessControlText = paper.text(bottomBarHorizontalStartingPosition + 175, bottomBarVerticalPosition + 25, "Empirical Process Control").attr(borderFont);
 
+empiricalProcessControlPopUp = paper.popup(leftBarHorizontalPosition, leftBarVerticalStartingPosition + 712,
+    " 5 Guide: LeSS Metrics with Less Targets (LeSS) \n "
+    , 'left', 5).hide();//paper.popup()
+empiricalProcessControlText.mouseover(function () {
+    empiricalProcessControlPopUp.show();
+});
+empiricalProcessControlText.mouseout(function () {
+    empiricalProcessControlPopUp.hide();
+});
 
 
 //Queueing theory Need to sort our text offsets
-var queueingTheory = paper.rect(bottomBarHorizontalStartingPosition+borderTopBottomRectangleWidth, bottomBarVerticalPosition, borderTopBottomRectangleWidth, borderTopBottomRectangleHeight).attr({fill: principleColour});;
-var queueingTheoryText = paper.text((bottomBarHorizontalStartingPosition*2)+275, bottomBarVerticalPosition+25, "Queueing Theory").attr(borderFont);
+var queueingTheory;
+queueingTheory = paper.rect(bottomBarHorizontalStartingPosition + borderTopBottomRectangleWidth, bottomBarVerticalPosition, borderTopBottomRectangleWidth, borderTopBottomRectangleHeight).attr({fill: principleColour});
 
-queueingTheoryPopUp = paper.popup(leftBarHorizontalPosition + 711, leftBarVerticalStartingPosition+712,
-	" 4 Guide: Transitioning to Feature Teams (LeSS Huge) \n 4 Guide: Understanding Feature Teams (LeSS) \n "
-	, 'right', 5 ).hide();//paper.popup()
-queueingTheoryText.mouseover(function(){queueingTheoryPopUp.show(); });
-queueingTheoryText.mouseout(function(){queueingTheoryPopUp.hide(); });
+var queueingTheoryText;
+queueingTheoryText = paper.text((bottomBarHorizontalStartingPosition * 2) + 275, bottomBarVerticalPosition + 25, "Queueing Theory").attr(borderFont);
 
+queueingTheoryPopUp = paper.popup(leftBarHorizontalPosition + 711, leftBarVerticalStartingPosition + 712,
+    " 4 Guide: Transitioning to Feature Teams (LeSS Huge) \n 4 Guide: Understanding Feature Teams (LeSS) \n "
+    , 'right', 5).hide();//paper.popup()
+queueingTheoryText.mouseover(function () {
+    queueingTheoryPopUp.show();
+});
+queueingTheoryText.mouseout(function () {
+    queueingTheoryPopUp.hide();
+});
 
 
 //Centre
-var productBacklog = paper.rect(fullWidthCentreBoxHorizontalPosition, borderTopBottomRectangleHeight + centreBoxesOffset + 100, largeRectangleLength,	allRectangleHeight,	bevel) 
-	.attr(productBacklogRefinementStyle)
-	.attr({href: "http://less.works/less/framework/product-backlog.html"});
-	
-	
-var productBacklogText = paper.text(fullWidthCentreBoxHorizontalPosition+300, borderTopBottomRectangleHeight + centreBoxesOffset + 125, "One Product Backlog").attr(centreFont).attr({href: "http://less.works/less/framework/product-backlog.html"});
+var productBacklog;
+productBacklog = paper.rect(fullWidthCentreBoxHorizontalPosition, borderTopBottomRectangleHeight + centreBoxesOffset + 100, largeRectangleLength, allRectangleHeight, bevel)
+    .attr(productBacklogRefinementStyle)
+    .attr({href: "http://less.works/less/framework/product-backlog.html"});
+
+
+var productBacklogText;
+productBacklogText = paper.text(fullWidthCentreBoxHorizontalPosition + 300, borderTopBottomRectangleHeight + centreBoxesOffset + 125, "One Product Backlog").attr(centreFont).attr({href: "http://less.works/less/framework/product-backlog.html"});
 
 //Overall PBR             
-var overallPBR = paper.rect(fullWidthCentreBoxHorizontalPosition, (borderTopBottomRectangleHeight + centreBoxesOffset)*2 + 100, largeRectangleLength, allRectangleHeight, bevel)
-.attr(productBacklogRefinementStyle)
-.attr({href: "http://less.works/less/framework/product-backlog-refinement.html"});
+var overallPBR;
+overallPBR = paper.rect(fullWidthCentreBoxHorizontalPosition, (borderTopBottomRectangleHeight + centreBoxesOffset) * 2 + 100, largeRectangleLength, allRectangleHeight, bevel)
+    .attr(productBacklogRefinementStyle)
+    .attr({href: "http://less.works/less/framework/product-backlog-refinement.html"});
 
-var overalPBRText = paper.text(fullWidthCentreBoxHorizontalPosition+300, borderTopBottomRectangleHeight + centreBoxesOffset + 80 + 100, "Overall Product Backlog Refinment (PBR)")
-.attr(centreFont)
-.attr({href: "http://less.works/less/framework/product-backlog-refinement.html"});
-
+var overallPBRText;
+overallPBRText = paper.text(fullWidthCentreBoxHorizontalPosition + 300, borderTopBottomRectangleHeight + centreBoxesOffset + 80 + 100, "Overall Product Backlog Refinement (PBR)")
+    .attr(centreFont)
+    .attr({href: "http://less.works/less/framework/product-backlog-refinement.html"});
 
 
 //Team PBR
-var teamPBR1 = paper.rect(fullWidthCentreBoxHorizontalPosition, (borderTopBottomRectangleHeight + centreBoxesOffset)*3 + 100, smallRectangleLength, allRectangleHeight, bevel)
-.attr(productBacklogRefinementStyle)
-.attr({href: "http://less.works/less/framework/product-backlog-refinement.html"});
+var teamPBR1;
+teamPBR1 = paper.rect(fullWidthCentreBoxHorizontalPosition, (borderTopBottomRectangleHeight + centreBoxesOffset) * 3 + 100, smallRectangleLength, allRectangleHeight, bevel)
+    .attr(productBacklogRefinementStyle)
+    .attr({href: "http://less.works/less/framework/product-backlog-refinement.html"});
 
-var teamPBR1Text = paper.text(fullWidthCentreBoxHorizontalPosition + 150, (borderTopBottomRectangleHeight + centreBoxesOffset + 8)*3 + 100, "Team PBR")
-.attr(centreFont)
-.attr({href: "http://less.works/less/framework/product-backlog-refinement.html"});
+var teamPBR1Text;
+teamPBR1Text = paper.text(fullWidthCentreBoxHorizontalPosition + 150, (borderTopBottomRectangleHeight + centreBoxesOffset + 8) * 3 + 100, "Team PBR")
+    .attr(centreFont)
+    .attr({href: "http://less.works/less/framework/product-backlog-refinement.html"});
 
-var teamPBR2 = paper.rect(fullWidthCentreBoxHorizontalPosition + 300, (borderTopBottomRectangleHeight + centreBoxesOffset)*3 + 100, smallRectangleLength, allRectangleHeight, bevel)
-.attr(productBacklogRefinementStyle)
-.attr({href: "http://less.works/less/framework/product-backlog-refinement.html"});
+var teamPBR2;
+teamPBR2 = paper.rect(fullWidthCentreBoxHorizontalPosition + 300, (borderTopBottomRectangleHeight + centreBoxesOffset) * 3 + 100, smallRectangleLength, allRectangleHeight, bevel)
+    .attr(productBacklogRefinementStyle)
+    .attr({href: "http://less.works/less/framework/product-backlog-refinement.html"});
 
-var teamPBR2Text = paper.text(fullWidthCentreBoxHorizontalPosition + 450, (borderTopBottomRectangleHeight + centreBoxesOffset + 8)*3 + 100, "Multi-team PBR")
-.attr(centreFont)
-.attr({href: "http://less.works/less/framework/product-backlog-refinement.html"});
+var teamPBR2Text;
+teamPBR2Text = paper.text(fullWidthCentreBoxHorizontalPosition + 450, (borderTopBottomRectangleHeight + centreBoxesOffset + 8) * 3 + 100, "Multi-team PBR")
+    .attr(centreFont)
+    .attr({href: "http://less.works/less/framework/product-backlog-refinement.html"});
 
 
 //Single team design workshops
-var singleTeamDesignWorkshop = paper.rect(fullWidthCentreBoxHorizontalPosition, (borderTopBottomRectangleHeight + centreBoxesOffset)*4 + 100, smallRectangleLength, allRectangleHeight, bevel)
-.attr(designWorkshopStyle)
-.attr({href: "http://less.works/less/technical-excellence/architecture-design.html#Designworkshopswithagilemodeling"});
+var singleTeamDesignWorkshop;
+singleTeamDesignWorkshop = paper.rect(fullWidthCentreBoxHorizontalPosition, (borderTopBottomRectangleHeight + centreBoxesOffset) * 4 + 100, smallRectangleLength, allRectangleHeight, bevel)
+    .attr(designWorkshopStyle)
+    .attr({href: "http://less.works/less/technical-excellence/architecture-design.html#Designworkshopswithagilemodeling"});
 
-var singleTeamDesignWorkshopText = paper.text(fullWidthCentreBoxHorizontalPosition + 150, borderTopBottomRectangleHeight + centreBoxesOffset + 190 + 100, "Single Team Design Workshop")
-.attr(centreFont)
-.attr({href: "http://less.works/less/technical-excellence/architecture-design.html#Designworkshopswithagilemodeling"});
+var singleTeamDesignWorkshopText;
+singleTeamDesignWorkshopText = paper.text(fullWidthCentreBoxHorizontalPosition + 150, borderTopBottomRectangleHeight + centreBoxesOffset + 190 + 100, "Single Team Design Workshop")
+    .attr(centreFont)
+    .attr({href: "http://less.works/less/technical-excellence/architecture-design.html#Designworkshopswithagilemodeling"});
 
 
 //Multi-team design workshops
-var multiTeamDesignWorkshop = paper.rect(fullWidthCentreBoxHorizontalPosition + 300, (borderTopBottomRectangleHeight + centreBoxesOffset)*4 + 100, smallRectangleLength, allRectangleHeight, bevel)
-.attr(designWorkshopStyle)
-.attr({href: "http://less.works/less/technical-excellence/architecture-design.html#Multi-teamdesignworkshopsforbroaderdesignissues"});
+var multiTeamDesignWorkshop;
+multiTeamDesignWorkshop = paper.rect(fullWidthCentreBoxHorizontalPosition + 300, (borderTopBottomRectangleHeight + centreBoxesOffset) * 4 + 100, smallRectangleLength, allRectangleHeight, bevel)
+    .attr(designWorkshopStyle)
+    .attr({href: "http://less.works/less/technical-excellence/architecture-design.html#Multi-teamdesignworkshopsforbroaderdesignissues"});
 
-var multiTeamDesignWorkshopText = paper.text(fullWidthCentreBoxHorizontalPosition+450, borderTopBottomRectangleHeight + centreBoxesOffset + 190 + 100, "Multi-team Design Workshop")
-.attr(centreFont)
-.attr({href: "http://less.works/less/technical-excellence/architecture-design.html#Multi-teamdesignworkshopsforbroaderdesignissues"});
+var multiTeamDesignWorkshopText;
+multiTeamDesignWorkshopText = paper.text(fullWidthCentreBoxHorizontalPosition + 450, borderTopBottomRectangleHeight + centreBoxesOffset + 190 + 100, "Multi-team Design Workshop")
+    .attr(centreFont)
+    .attr({href: "http://less.works/less/technical-excellence/architecture-design.html#Multi-teamdesignworkshopsforbroaderdesignissues"});
 
 
 //Sprint Planning
-var sprintPlanning1 = paper.rect(fullWidthCentreBoxHorizontalPosition, (borderTopBottomRectangleHeight + centreBoxesOffset)*5 + 100, largeRectangleLength, allRectangleHeight, bevel)
-.attr(sprintPlanningStyle)
-.attr({href: "http://less.works/less/framework/sprint-planning-one.html"});
+var sprintPlanning1;
+sprintPlanning1 = paper.rect(fullWidthCentreBoxHorizontalPosition, (borderTopBottomRectangleHeight + centreBoxesOffset) * 5 + 100, largeRectangleLength, allRectangleHeight, bevel)
+    .attr(sprintPlanningStyle)
+    .attr({href: "http://less.works/less/framework/sprint-planning-one.html"});
 
-var sprintPlanning1Text = paper.text(fullWidthCentreBoxHorizontalPosition+300, borderTopBottomRectangleHeight + centreBoxesOffset + 245 + 100, "Sprint Planning One")
-.attr(centreFont)
-.attr({href: "http://less.works/less/framework/sprint-planning-one.html"});
+var sprintPlanning1Text;
+sprintPlanning1Text = paper.text(fullWidthCentreBoxHorizontalPosition + 300, borderTopBottomRectangleHeight + centreBoxesOffset + 245 + 100, "Sprint Planning One")
+    .attr(centreFont)
+    .attr({href: "http://less.works/less/framework/sprint-planning-one.html"});
 
 //teriible variable names, wtf do they mean!
-var sprintPlanning2a = paper.rect(fullWidthCentreBoxHorizontalPosition, (borderTopBottomRectangleHeight + centreBoxesOffset)*6 + 100, smallRectangleLength, allRectangleHeight, bevel)
-.attr(sprintPlanningStyle)
-.attr({href: "http://less.works/less/framework/sprint-planning-two.html"});
+var sprintPlanning2a;
+sprintPlanning2a = paper.rect(fullWidthCentreBoxHorizontalPosition, (borderTopBottomRectangleHeight + centreBoxesOffset) * 6 + 100, smallRectangleLength, allRectangleHeight, bevel)
+    .attr(sprintPlanningStyle)
+    .attr({href: "http://less.works/less/framework/sprint-planning-two.html"});
 
-var sprintPlanning2aText = paper.text(fullWidthCentreBoxHorizontalPosition+155, borderTopBottomRectangleHeight + centreBoxesOffset + 300 + 100, "Team Sprint Planning 2")
-	.attr(centreFont)
-	.attr({href: "http://less.works/less/framework/sprint-planning-two.html"});
+var sprintPlanning2aText;
+sprintPlanning2aText = paper.text(fullWidthCentreBoxHorizontalPosition + 155, borderTopBottomRectangleHeight + centreBoxesOffset + 300 + 100, "Team Sprint Planning 2")
+    .attr(centreFont)
+    .attr({href: "http://less.works/less/framework/sprint-planning-two.html"});
 
-var sprintPlanning2b= paper.rect(fullWidthCentreBoxHorizontalPosition + 300, (borderTopBottomRectangleHeight + centreBoxesOffset)*6 + 100, smallRectangleLength, allRectangleHeight, bevel)
-	.attr(sprintPlanningStyle)
-	.attr({href: "http://less.works/less/framework/sprint-planning-two.html"});
-var sprintPlanning2bText = paper.text(fullWidthCentreBoxHorizontalPosition+455, borderTopBottomRectangleHeight + centreBoxesOffset + 300 + 100, "Multi-team Sprint Planning 2")
-	.attr(centreFont)
-	.attr({href: "http://less.works/less/framework/sprint-planning-two.html"});
+var sprintPlanning2b;
+sprintPlanning2b = paper.rect(fullWidthCentreBoxHorizontalPosition + 300, (borderTopBottomRectangleHeight + centreBoxesOffset) * 6 + 100, smallRectangleLength, allRectangleHeight, bevel)
+    .attr(sprintPlanningStyle)
+    .attr({href: "http://less.works/less/framework/sprint-planning-two.html"});
+var sprintPlanning2bText;
+sprintPlanning2bText = paper.text(fullWidthCentreBoxHorizontalPosition + 455, borderTopBottomRectangleHeight + centreBoxesOffset + 300 + 100, "Multi-team Sprint Planning 2")
+    .attr(centreFont)
+    .attr({href: "http://less.works/less/framework/sprint-planning-two.html"});
 
 //communitys
-var architecturecommunity = paper.rect(fullWidthCentreBoxHorizontalPosition, 385 + 100, largeRectangleLength, allRectangleHeight*1.5, bevel)
-	.attr(communityStyle)
-	.attr({href: "http://less.works/less/structure/communities.html"});
+var architecturecommunity;
+architecturecommunity = paper.rect(fullWidthCentreBoxHorizontalPosition, 385 + 100, largeRectangleLength, allRectangleHeight * 1.5, bevel)
+    .attr(communityStyle)
+    .attr({href: "http://less.works/less/structure/communities.html"});
 
-var architecturecommunityText = paper.text(fullWidthCentreBoxHorizontalPosition+300, 410 + 100, "Architecure community")
-	.attr(centreFont)
-	.attr({href: "http://less.works/less/structure/communities.html"});
+var architecturecommunityText;
+architecturecommunityText = paper.text(fullWidthCentreBoxHorizontalPosition + 300, 410 + 100, "Architecure community")
+    .attr(centreFont)
+    .attr({href: "http://less.works/less/structure/communities.html"});
 
-var testingcommunity = paper.rect(fullWidthCentreBoxHorizontalPosition, 435 + 100, largeRectangleLength, allRectangleHeight*1.5, bevel)
-	.attr(communityStyle)
-	.attr({href: "http://less.works/less/structure/communities.html"});
+var testingcommunity;
+testingcommunity = paper.rect(fullWidthCentreBoxHorizontalPosition, 435 + 100, largeRectangleLength, allRectangleHeight * 1.5, bevel)
+    .attr(communityStyle)
+    .attr({href: "http://less.works/less/structure/communities.html"});
 
-var testingcommunityText = paper.text(fullWidthCentreBoxHorizontalPosition+300, 460 + 100, "Testing community")
-	.attr(centreFont)
-	.attr({href: "http://less.works/less/structure/communities.html"});
+var testingcommunityText;
+testingcommunityText = paper.text(fullWidthCentreBoxHorizontalPosition + 300, 460 + 100, "Testing community")
+    .attr(centreFont)
+    .attr({href: "http://less.works/less/structure/communities.html"});
 
-var developmentcommunity = paper.rect(fullWidthCentreBoxHorizontalPosition, 490 + 100, largeRectangleLength, allRectangleHeight*1.5, bevel)
-	.attr(communityStyle)
-	.attr({href: "http://less.works/less/structure/communities.html"});
-var developmentcommunityText = paper.text(fullWidthCentreBoxHorizontalPosition+300, 520 + 100, "Development community")
-	.attr(centreFont)
-	.attr({href: "http://less.works/less/structure/communities.html"});
+var developmentcommunity;
+developmentcommunity = paper.rect(fullWidthCentreBoxHorizontalPosition, 490 + 100, largeRectangleLength, allRectangleHeight * 1.5, bevel)
+    .attr(communityStyle)
+    .attr({href: "http://less.works/less/structure/communities.html"});
+var developmentcommunityText;
+developmentcommunityText = paper.text(fullWidthCentreBoxHorizontalPosition + 300, 520 + 100, "Development community")
+    .attr(centreFont)
+    .attr({href: "http://less.works/less/structure/communities.html"});
 
 //Teams
-var teamOne = paper.circle(370, 560, 25).animate({fill: "#223fa3", stroke: "#000", "stroke-width": 80, "stroke-opacity": 0.5}, 1000)
-	.attr({href: "http://less.works/less/structure/teams.html"});
-var teamOneText = paper.text(370, 520, "Team 1")
-	.attr(teamFont)
-	.attr({href: "http://less.works/less/structure/teams.html"});
+var teamOne;
+teamOne = paper.circle(370, 560, 25).animate({
+        fill: "#223fa3",
+        stroke: "#000",
+        "stroke-width": 80,
+        "stroke-opacity": 0.5
+    }, 1000)
+    .attr({href: "http://less.works/less/structure/teams.html"});
+var teamOneText;
+teamOneText = paper.text(370, 520, "Team 1")
+    .attr(teamFont)
+    .attr({href: "http://less.works/less/structure/teams.html"});
 
 
-var teamTwo = paper.circle(500, 590, 25).animate({fill: "#223fa3", stroke: "#000", "stroke-width": 80, "stroke-opacity": 0.5}, 1000)
-	.attr({href: "http://less.works/less/structure/teams.html"});
+var teamTwo;
+teamTwo = paper.circle(500, 590, 25).animate({
+        fill: "#223fa3",
+        stroke: "#000",
+        "stroke-width": 80,
+        "stroke-opacity": 0.5
+    }, 1000)
+    .attr({href: "http://less.works/less/structure/teams.html"});
 
-var teamTwoText = paper.text(500, 550, "Team 2")
-	.attr(teamFont)
-	.attr({href: "http://less.works/less/structure/teams.html"});
-
-
-
-var teamThree = paper.circle(710, 590, 25).animate({fill: "#223fa3", stroke: "#000", "stroke-width": 80, "stroke-opacity": 0.5}, 1000)
-	.attr({href: "http://less.works/less/structure/teams.html"});
-
-var teamThreeText = paper.text(710, 550, "Team 3")
-	.attr(teamFont)
-	.attr({href: "http://less.works/less/structure/teams.html"});
+var teamTwoText;
+teamTwoText = paper.text(500, 550, "Team 2")
+    .attr(teamFont)
+    .attr({href: "http://less.works/less/structure/teams.html"});
 
 
-var teamFour = paper.circle(840, 560, 25).animate({fill: "#223fa3", stroke: "#000", "stroke-width": 80, "stroke-opacity": 0.5}, 1000)
-	.attr({href: "http://less.works/less/structure/teams.html"});
+var teamThree;
+teamThree = paper.circle(710, 590, 25).animate({
+        fill: "#223fa3",
+        stroke: "#000",
+        "stroke-width": 80,
+        "stroke-opacity": 0.5
+    }, 1000)
+    .attr({href: "http://less.works/less/structure/teams.html"});
 
-var teamFourText = paper.text(840, 520, "Team n")
-	.attr(teamFont)
-	.attr({href: "http://less.works/less/structure/teams.html"});
+var teamThreeText;
+teamThreeText = paper.text(710, 550, "Team 3")
+    .attr(teamFont)
+    .attr({href: "http://less.works/less/structure/teams.html"});
+
+
+var teamFour;
+teamFour = paper.circle(840, 560, 25).animate({
+        fill: "#223fa3",
+        stroke: "#000",
+        "stroke-width": 80,
+        "stroke-opacity": 0.5
+    }, 1000)
+    .attr({href: "http://less.works/less/structure/teams.html"});
+
+var teamFourText;
+teamFourText = paper.text(840, 520, "Team n")
+    .attr(teamFont)
+    .attr({href: "http://less.works/less/structure/teams.html"});
 
 //Sprint Review
-var sprintReview = paper.rect(fullWidthCentreBoxHorizontalPosition, 570 + 100, largeRectangleLength, allRectangleHeight, bevel)
-	.attr(reviewReflectionStyle)
-	.attr({href: "http://less.works/less/framework/sprint-review.html"});
+var sprintReview;
+sprintReview = paper.rect(fullWidthCentreBoxHorizontalPosition, 570 + 100, largeRectangleLength, allRectangleHeight, bevel)
+    .attr(reviewReflectionStyle)
+    .attr({href: "http://less.works/less/framework/sprint-review.html"});
 
 var sprintReviewText;
 sprintReviewText = paper.text(fullWidthCentreBoxHorizontalPosition + 300, borderTopBottomRectangleHeight + centreBoxesOffset + 540 + 100, "Sprint Review")
@@ -444,9 +558,11 @@ teamOneRetrospectiveText = paper.text(fullWidthCentreBoxHorizontalPosition + 300
     .attr(centreFont)
     .attr({href: "http://less.works/less/framework/retrospective.html"});
 
-var overallRetrospective = paper.rect(fullWidthCentreBoxHorizontalPosition, 680 + 100, largeRectangleLength, allRectangleHeight, bevel)
-	.attr(reviewReflectionStyle)
-	.attr({href: "http://less.works/less/framework/overall-retrospective.html"});
-var overalRetrospectiveText = paper.text(fullWidthCentreBoxHorizontalPosition+300, borderTopBottomRectangleHeight + centreBoxesOffset + 650+100, "Overal Retrospective")
-	.attr(centreFont)
-	.attr({href: "http://less.works/less/framework/overall-retrospective.html"});
+var overallRetrospective;
+overallRetrospective = paper.rect(fullWidthCentreBoxHorizontalPosition, 680 + 100, largeRectangleLength, allRectangleHeight, bevel)
+    .attr(reviewReflectionStyle)
+    .attr({href: "http://less.works/less/framework/overall-retrospective.html"});
+var overalRetrospectiveText;
+overalRetrospectiveText = paper.text(fullWidthCentreBoxHorizontalPosition + 300, borderTopBottomRectangleHeight + centreBoxesOffset + 650 + 100, "Overal Retrospective")
+    .attr(centreFont)
+    .attr({href: "http://less.works/less/framework/overall-retrospective.html"});
