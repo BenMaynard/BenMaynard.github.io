@@ -1,6 +1,6 @@
 //Need to add improvment backlog
 
-// Creates canvas 320 × 200 at 10, 50
+// Creates canvas 320 ï¿½ 200 at 10, 50
 var paper = Raphael(50, 50, 1500, 1000);
 
 
@@ -12,7 +12,7 @@ var bevel = 10;
 var largeRectangleLength = 600;
 var smallRectangleLength = 300;
 
-
+/*
 //Principle Pop-Up Text
 var largeScaleScrumIsScrumPopUpText = "test";
 var moreWithLeSSPopUpText = "";
@@ -24,7 +24,7 @@ var leanThinkingPopUpText = "";
 var systemsThinkingPopUpText = "";
 var empircalProcessControlPopUpText = "";
 var queueingTheoryleSSIsScrumPopUpText = "";
-
+*/
 // Product Backlog style info
 var productBacklogRefinementStyle = {
   fill: "#ddd",
@@ -216,7 +216,7 @@ systemsThinkingText.mouseout(function(){systemsThinkingPopUp.hide(); });
 
 //Right Bar
 //More with LeSS
-var moreWithLeSS = paper.rect(rightBarHorizontalPosition, rightBarVerticalStartingPosition, borderSideRectangleWidth, borderSideRectangleHeight).attr({fill: principleColour});;
+var moreWithLeSS = paper.rect(rightBarHorizontalPosition, rightBarVerticalStartingPosition, borderSideRectangleWidth, borderSideRectangleHeight).attr({fill: principleColour});
 var moreWithLeSSText = paper.text(rightBarHorizontalPosition +100, rightBarVerticalStartingPosition+sideBarVerticalTextOffset, "More With LeSS")
 .attr(borderFont).rotate( textRotation, 870, 125 );
 
@@ -228,7 +228,7 @@ moreWithLeSSText.mouseout(function(){moreWithLeSSPopUp.hide(); });
 
 
 //Whole Product Focus
-var wholeProductFocus = paper.rect(rightBarHorizontalPosition, rightBarVerticalStartingPosition+borderSideRectangleHeight, borderSideRectangleWidth, borderSideRectangleHeight).attr({fill: principleColour});;
+var wholeProductFocus = paper.rect(rightBarHorizontalPosition, rightBarVerticalStartingPosition+borderSideRectangleHeight, borderSideRectangleWidth, borderSideRectangleHeight).attr({fill: principleColour});
 var wholeProductFocusText = paper.text(rightBarHorizontalPosition + borderSideRectangleHeight +100, rightBarVerticalStartingPosition+sideBarVerticalTextOffset, "Whole Product Focus")
 .attr(borderFont).rotate( textRotation, 870, 125 );
 
@@ -246,7 +246,7 @@ var customerCentricText = paper.text(rightBarHorizontalPosition + (borderSideRec
 .attr(borderFont).rotate( textRotation, 870, 125 );
 
 customerCentricPopUp = paper.popup(leftBarHorizontalPosition + 711, leftBarVerticalStartingPosition+550,
-	" 7 Guide: Don’t Be Nice  (LeSS) \n  8 Guide: More Outcomes, less Outputs  (LeSS) \n  7 Guide: Prioritization over Clarification (LeSS) \n  6.5 Guide: Product over Project or Program (LeSS) \n  2 Guide: Teams specialize in customer (not technical) areas (LeSS) \n  7 Guide: Who are those Users/Customers? (LeSS) \n"
+	" 7 Guide: Donï¿½t Be Nice  (LeSS) \n  8 Guide: More Outcomes, less Outputs  (LeSS) \n  7 Guide: Prioritization over Clarification (LeSS) \n  6.5 Guide: Product over Project or Program (LeSS) \n  2 Guide: Teams specialize in customer (not technical) areas (LeSS) \n  7 Guide: Who are those Users/Customers? (LeSS) \n"
 	, 'right', 5 ).hide();//paper.popup()
 customerCentricText.mouseover(function(){customerCentricPopUp.show(); });
 customerCentricText.mouseout(function(){customerCentricPopUp.hide(); });
@@ -292,7 +292,7 @@ var overallPBR = paper.rect(fullWidthCentreBoxHorizontalPosition, (borderTopBott
 .attr(productBacklogRefinementStyle)
 .attr({href: "http://less.works/less/framework/product-backlog-refinement.html"});
 
-var overalPBRText = paper.text(fullWidthCentreBoxHorizontalPosition+300, borderTopBottomRectangleHeight + centreBoxesOffset + 80 + 100, "Overal Product Backlog Refinment (PBR)")
+var overalPBRText = paper.text(fullWidthCentreBoxHorizontalPosition+300, borderTopBottomRectangleHeight + centreBoxesOffset + 80 + 100, "Overall Product Backlog Refinment (PBR)")
 .attr(centreFont)
 .attr({href: "http://less.works/less/framework/product-backlog-refinement.html"});
 
@@ -372,7 +372,7 @@ var architectureCoPText = paper.text(fullWidthCentreBoxHorizontalPosition+300, 4
 
 var testingCoP = paper.rect(fullWidthCentreBoxHorizontalPosition, 435 + 100, largeRectangleLength, allRectangleHeight*1.5, bevel)
 	.attr(coPStyle)
-	.attr({href: "http://less.works/less/structure/communities.html"});;
+	.attr({href: "http://less.works/less/structure/communities.html"});
 
 var testingCoPText = paper.text(fullWidthCentreBoxHorizontalPosition+300, 460 + 100, "Testing CoP")
 	.attr(centreFont)
