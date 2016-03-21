@@ -12,19 +12,121 @@ var bevel = 10;
 var largeRectangleLength = 600;
 var smallRectangleLength = 300;
 
-/*
+
  //Principle Pop-Up Text
- var largeScaleScrumIsScrumPopUpText = "test";
- var moreWithLeSSPopUpText = "";
- var transparencyPopUpText = "";
- var customerCentricPopUpText = "";
- var wholeProductFocusPopUpText = "";
- var continuousImprovementTowardsPerfectionPopUpText = "";
- var leanThinkingPopUpText = "";
+var largeScaleScrumIsScrumPopUpText = " 2 Guide: Inspect items during Sprint (LeSS) \n \
+4 Guide: Build Team-Based Organizations (LeSS) \n \
+2 Guide: Coordinate together & talking (LeSS) \n \
+2 Guide: Coordinate together & talking (LeSS) \n \
+9 Guide: Creating the Definition of Done (LeSS) \n \
+3 Guide: Culture follows Structure (LeSS) \n \
+7 Guide: Customer Collaborations over... (LeSS) \n  \
+8 Guide: Dealing with Parents (LeSS) \n \
+2 Guide: Diverge merge in large meetings (LeSS) \n \
+7 Guide: Don’t Do It (LeSS) \n \
+9 Guide: Evolve the Definition of Done (LeSS) \n \
+3 Guide: Getting Started (LeSS) \n \
+8 Guide: Handling Special Items (LeSS) \n \
+7 Guide: Helpers (LeSS) \n \
+2 Guide: How to split items (LeSS) \n \
+10 Guide: Initial PBR (LeSS) \n \
+2 Guide: Lead Product Manager is Product Owner (LeSS) \n \
+7 Guide: Let Go  (LeSS) \n \
+8 Guide: Minimize Constraints, Don’t “Manage External Dependencies” (LeSS) \n \
+4 Guide: Prefer Specialization in Customer Domain (LeSS) \n \
+4 Guide: Product over Project or Program (LeSS) \n \
+2 Guide: Shared understanding (LeSS) \n \
+7 Guide: Ship At Least Every Sprint  (LeSS) \n \
+2 Guide: Split items are 1/3 of a Sprint, or less (LeSS) \n \
+10 Guide: Splitting (LeSS) \n \
+2 Guide: Sprint Planning One maximum duration of 50% of total Sprint Planning (LeSS) \n \
+8 Guide: Take a Bite (LeSS) \n \
+2 Guide: Teams decide who does what (self-organizing) (LeSS) \n \
+8 Guide: Tools for Large Product Backlogs (LeSS) \n \
+7 Guide: Who should be Product Owner? (LeSS) \n";
+
+
+var moreWithLeSSPopUpText;
+moreWithLeSSPopUpText = " 8 Guide: Area Backlogs (LeSS Huge) \n  \
+ 7 Guide: Area Product Owners  (LeSS Huge) \n  \
+ 7 Guide: Don’t Let Undone Work be Your Undoing  (LeSS) \n  \
+ 4 Guide: Dynamics of Requirement Areas (LeSS Huge) \n  \
+ 7 Guide: Five Relationships (LeSS) \n  \
+ 8 Guide: Handling Gigantic Requirements (LeSS Huge) \n  \
+ 4 Guide: LeSS Huge Organization (LeSS Huge) \n  \
+ 7 Guide: LeSS Huge Product Owner (LeSS Huge) \n  \
+ 7 Guide: LeSS Meetings (LeSS) \n  \
+ 4 Guide: LeSS Organization (LeSS Huge) \n  \
+ 2 Guide: Maximum 3 Teams per dedicated ScrumMaster (LeSS) \n  \
+ 2 Guide: Multiteam Design Workshop with agile modelling# (LeSS) \n  \
+ 10 Guide: Multi-Team PBR (LeSS) \n  \
+ 8 Guide: New Area for Giant Requirement (LeSS Huge) \n  \
+ 2 Guide: Open Space (LeSS) \n  \
+ 4 Guide: Organizing Multisite in LeSS (LeSS Multi-Site) \n  \
+ 4 Guide: Organizing Multisite in LeSS Huge (LeSS Multi-Site) \n  \
+ 2 Guide: Overall PBR for shared understanding and alignment (LeSS) \n  \
+ 7 Guide: PO Team Helped by a ScrumMaster (LeSS Huge) \n  \
+ 7 Guide: Product Owner Multisite Tips (LeSS Multi-Site) \n  \
+ 10 Guide: Scaling Estimation (LeSS) \n  \
+ 2 Guide: Teams do PB administration to help PO (LeSS) \n  \
+ 7 Guide: Temporary Fake Product Owner (LeSS) \n  \
+ 5 Guide: The LeSS Organization (LeSS) \n  \
+ 8 Guide: Three Levels Max (LeSS Huge) \n  \
+ 12 Guide: Just Talk (LeSS) \n  \
+ 12 Guide: Maybe Don’t do Scrum of Scrums (LeSS) \n  \
+ 12 Guide: Open Space (LeSS) \n  \
+ 2 Guide: Product Owner has support (LeSS) \n  \
+ 2 Guide: Review Bazaar (LeSS) \n  \
+ 2 Guide: Rotate infrastructure work (LeSS) \n  \
+ 2 Guide: Rotating Team representatives (LeSS) \n  \
+ 12 Guide: Scouts (LeSS) \n  \
+ 12 Guide: Travelers (LeSS) \n  \ ";
+
+var transparencyPopUpText = "";
+
+var customerCentricPopUpText;
+customerCentricPopUpText = " 7 Guide: Don’t Be Nice  (LeSS) \n 8 Guide: More Outcomes, less Outputs  (LeSS) \n 7 Guide: Prioritization over Clarification (LeSS) \n 6.5 Guide: Product over Project or Program (LeSS) \n 2 Guide: Teams specialize in customer (not technical) areas (LeSS) \n 7 Guide: Who are those Users/Customers? (LeSS) \n";
+var wholeProductFocusPopUpText = "";
+
+var continuousImprovementTowardsPerfectionPopUpText;
+continuousImprovementTowardsPerfectionPopUpText = " 3 Guide: Educate all Sites (LeSS Multi-Site) \n 3 Guide: Growing your Adoption (LeSS) \n";
+
+var wholeProductFocusPopUpText;
+wholeProductFocusPopUpText = " 6.5 Guide: Define your Product (LeSS) \n  \
+ 3 Guide: Establish Clear Direction (LeSS) \n  \
+ 6.5 Guide: Expanding Product Definition (LeSS) \n  \
+ 2 Guide: Multiteam PBR (LeSS) \n  \
+ 3 Guide: One Requirement Area at a Time (LeSS Huge) \n  \
+ 10 Guide: Overall PBR (LeSS) \n  \
+ 2 Guide: Overall PBR for shared understanding and alignment (LeSS) \n  \
+ 4 Guide: Requirement Areas (LeSS Huge) \n  \
+ 4 Guide: Seeing The Whole (LeSS) \n  \
+ 6.5 Guide: What is Your Product? (LeSS) \n  \
+ 2 Guide: Whole team refines (LeSS) \n  \
+";
+
+
+var leanThinkingPopUpText;
+leanThinkingPopUpText = " 5 Guide: Go See (LeSS) \n  \
+3 Guide: Improvement Service (LeSS) \n \
+3 Guide: Job Safety, but not Role Safety (LeSS) \n \
+5 Guide: Managers are Optional (LeSS) \n \
+5 Guide: Managers as Teachers, and Learners (LeSS) \n \
+5 Guide: Theory Y Management  (LeSS) \n \
+5 Guide: Understand Taylor and Fayol (LeSS) \n \
+";
+
+
  var systemsThinkingPopUpText = "";
- var empircalProcessControlPopUpText = "";
- var queueingTheoryleSSIsScrumPopUpText = "";
- */
+
+var empircalProcessControlPopUpText;
+empircalProcessControlPopUpText = " 5 Guide: LeSS Metrics with Less Targets (LeSS) \n";
+
+var queueingTheoryleSSIsScrumPopUpText;
+queueingTheoryleSSIsScrumPopUpText = " 4 Guide: Transitioning to Feature Teams (LeSS Huge) \n  \
+ 4 Guide: Understanding Feature Teams (LeSS) \n  \
+";
+
 
 //Required event or artefact colour variables
 
@@ -40,32 +142,8 @@ var requiredEventStyle = {
 
 //Required event or artefact colour variables
 
-// Design workshop style info
-var overallProductBacklogRefinementStyle = {
-    fill: "#99CCCC",
-    stroke: "#aaa",
-    "stroke-width": 1,
-    "stroke-linejoin": "round",
-    cursor: "pointer"
-};
 
-var multiTeamProductBacklogRefinementStyle = {
-    fill: "#99CCCC",
-    stroke: "#aaa",
-    "stroke-width": 1,
-    "stroke-linejoin": "round",
-    cursor: "pointer"
-};
-
-var multiTeamSprintPlanningStyle = {
-    fill: "#99CCCC",
-    stroke: "#aaa",
-    "stroke-width": 1,
-    "stroke-linejoin": "round",
-    cursor: "pointer"
-};
-
-var designWorkshopStyle = {
+var optionalEventStyle = {
     fill: "#99CCCC",
     stroke: "#aaa",
     "stroke-width": 1,
@@ -90,12 +168,24 @@ var principleColour = "#A2D7E8";
 var centreFont = {"font-family": "serif", "font-style": "regular", "font-size": "20"};
 var borderFont = {"font-family": "serif", "font-style": "regular", "font-size": "20"};
 var teamFont = {"font-family": "serif", "font-style": "regular", "font-size": "20"};
-var improvementBacklogCustomerValueFlowFont = {
+
+var improveentBacklogCustomerValueFlowFont;
+improvementBacklogCustomerValueFlowFont = {
     "font-family": "serif",
     "font-style": "regular",
     "font-size": "30",
-    "letter-spacing": "25px"
+    "letter-spacing": "18px"
 };
+
+var customerValueFlowTextStyle;
+customerValueFlowTextStyle = {
+    "font-family": "serif",
+    "font-style": "regular",
+    "font-size": "30",
+    "letter-spacing": "18px"
+};
+
+
 
 //Border Rectangle Dimensions
 var borderSideRectangleHeight = 229;
@@ -162,7 +252,7 @@ paper.path([
 
 var customerValueFlowText;
 customerValueFlowText = paper.text(leftBarHorizontalPosition + borderSideRectangleHeight + 45, leftBarVerticalStartingPosition + sideBarVerticalTextOffset - 760, "Customer Value Flow")
-    .attr(improvementBacklogCustomerValueFlowFont).rotate(textRotation, 162, 125)
+    .attr(customerValueFlowTextStyle).rotate(textRotation, 162, 125)
     .attr({href: "http://less.works/less/principles/lean-thinking.html#LeanThinking"});
 
 
@@ -175,7 +265,7 @@ largeScaleScrumIsScrumText = paper.text(topBarHorizontalStartingPosition + topBa
 // will animate the rectangle colour fade, needs more params .animate({fill: "principleColour"}, 2000);
 
 largeScaleScrumIsScrumPopUp = paper.popup(leftBarHorizontalPosition, leftBarVerticalStartingPosition - 25,
-    "Test text \n 	Shall I put these all in the same location? \n 	What are the limitations of this pop up? \n What can be tweaked via g.raphel? \n Can I Hi I m a Circle...:)"
+    largeScaleScrumIsScrumPopUpText
     , 'left', 5).hide();//paper.popup()
 largeScaleScrumIsScrumText.mouseover(function () {
     largeScaleScrumIsScrumPopUp.show();
@@ -195,7 +285,7 @@ var transparencyText;
 transparencyText = paper.text((topBarHorizontalStartingPosition + 350) + topBarHorizontalTextOffset, topBarVerticalPosition + topBarVerticalTextOffset + 100, "Transparency").attr(borderFont);
 
 transparencyPopUp = paper.popup(leftBarHorizontalPosition + 711, leftBarVerticalStartingPosition - 25,
-    "Test text \n 	Shall I put these all in the same location? \n 	What are the limitations of this pop up? \n What can be tweaked via g.raphel? \n Can I Hi I m a Circle...:)"
+    transparencyPopUpText
     , 'right', 5).hide();//paper.popup()
 transparencyText.mouseover(function () {
     transparencyPopUp.show();
@@ -212,13 +302,13 @@ continuousImprovementTowardsPerfection = paper.rect(leftBarHorizontalPosition, l
 
 
 var continuousImprovementTowardsPerfectionText;
-continuousImprovementTowardsPerfectionText = paper.text(leftBarHorizontalPosition + 100, leftBarVerticalStartingPosition + sideBarVerticalTextOffset, "continuous Improvement \n Towards Perfection")
+continuousImprovementTowardsPerfectionText = paper.text(leftBarHorizontalPosition + 100, leftBarVerticalStartingPosition + sideBarVerticalTextOffset, "Continuous Improvement \n Towards Perfection")
     .attr(borderFont).rotate(textRotation, 210, 125);
 
 //.popup(x , y, location , size)
 
 continuousImprovementTowardsPerfectionPopUp = paper.popup(leftBarHorizontalPosition, leftBarVerticalStartingPosition + 50,
-    " 3 Guide: Educate all Sites (LeSS Mult-Site)\n  3 Guide: Growing your Adoption (LeSS)"
+    continuousImprovementTowardsPerfectionPopUpText
     , 'left', 5).hide();//paper.popup()
 continuousImprovementTowardsPerfectionText.mouseover(function () {
     continuousImprovementTowardsPerfectionPopUp.show();
@@ -237,7 +327,7 @@ leanThinkingText = paper.text(leftBarHorizontalPosition + borderSideRectangleHei
     .attr(borderFont).rotate(textRotation, 210, 125);
 
 leanThinkingPopUp = paper.popup(leftBarHorizontalPosition, leftBarVerticalStartingPosition + 300,
-    " 5 Guide: Go See (LeSS) \n 3 Guide: Improvement Service (LeSS) \n 3 Guide: Job Safety, but not Role Safety (LeSS) \n 5 Guide: Managers are Optional (LeSS) \n 5 Guide: Managers as Teachers, and Learners (LeSS) \n 5 Guide: Theory Y Management  (LeSS) \n 5 Guide: Understand Taylor and Fayol (LeSS) \n "
+    leanThinkingPopUpText
     , 'left', 5).hide();//paper.popup()
 leanThinkingText.mouseover(function () {
     leanThinkingPopUp.show();
@@ -256,7 +346,7 @@ systemsThinkingText = paper.text(leftBarHorizontalPosition + (borderSideRectangl
     .attr(borderFont).rotate(textRotation, 210, 125);
 
 systemsThinkingPopUp = paper.popup(leftBarHorizontalPosition, leftBarVerticalStartingPosition + 550,
-    "Test text \n 	Shall I put these all in the same location? \n 	What are the limitations of this pop up? \n What can be tweaked via g.raphel? \n Can I Hi I m a Circle...:)"
+    systemsThinkingPopUpText
     , 'left', 5).hide();//paper.popup()
 systemsThinkingText.mouseover(function () {
     systemsThinkingPopUp.show();
@@ -276,7 +366,7 @@ moreWithLeSSText = paper.text(rightBarHorizontalPosition + 100, rightBarVertical
     .attr(borderFont).rotate(textRotation, 870, 125);
 
 moreWithLeSSPopUp = paper.popup(leftBarHorizontalPosition + 711, leftBarVerticalStartingPosition + 50,
-    "Test text \n 	Shall I put these all in the same location? \n 	What are the limitations of this pop up? \n What can be tweaked via g.raphel? \n Can I Hi I m a Circle...:)"
+    moreWithLeSSPopUpText
     , 'right', 5).hide();//paper.popup()
 moreWithLeSSText.mouseover(function () {
     moreWithLeSSPopUp.show();
@@ -294,7 +384,7 @@ wholeProductFocusText = paper.text(rightBarHorizontalPosition + borderSideRectan
     .attr(borderFont).rotate(textRotation, 870, 125);
 
 wholeProductFocusPopUp = paper.popup(leftBarHorizontalPosition + 711, leftBarVerticalStartingPosition + 300,
-    " 6.5 Guide: Define your Product (LeSS) \n 3 Guide: Establish Clear Direction (LeSS) \n 6.5 Guide: Expanding Product Definition (LeSS) \n 2 Guide: Multiteam PBR (LeSS) \n 3 Guide: One Requirement Area at a Time (LeSS Huge) \n 10 Guide: Overall PBR (LeSS) \n 2 Guide: Overall PBR for shared understanding and alignment (LeSS) \n 4 Guide: Requirement Areas (LeSS Huge) \n 4 Guide: Seeing The Whole (LeSS) \n 6.5 Guide: What is Your Product? (LeSS) \n 2 Guide: Whole team refines (LeSS) \n "
+    wholeProductFocusPopUpText
     , 'right', 5).hide();//paper.popup()
 wholeProductFocusText.mouseover(function () {
     wholeProductFocusPopUp.show();
@@ -313,7 +403,7 @@ customerCentricText = paper.text(rightBarHorizontalPosition + (borderSideRectang
     .attr(borderFont).rotate(textRotation, 870, 125);
 
 customerCentricPopUp = paper.popup(leftBarHorizontalPosition + 711, leftBarVerticalStartingPosition + 550,
-    " 7 Guide: Don't Be Nice  (LeSS) \n  8 Guide: More Outcomes, less Outputs  (LeSS) \n  7 Guide: Prioritization over Clarification (LeSS) \n  6.5 Guide: Product over Project or Program (LeSS) \n  2 Guide: Teams specialize in customer (not technical) areas (LeSS) \n  7 Guide: Who are those Users/Customers? (LeSS) \n"
+    customerCentricPopUpText
     , 'right', 5).hide();//paper.popup()
 customerCentricText.mouseover(function () {
     customerCentricPopUp.show();
@@ -333,7 +423,7 @@ var empiricalProcessControlText;
 empiricalProcessControlText = paper.text(bottomBarHorizontalStartingPosition + 175, bottomBarVerticalPosition + 25, "Empirical Process Control").attr(borderFont);
 
 empiricalProcessControlPopUp = paper.popup(leftBarHorizontalPosition, leftBarVerticalStartingPosition + 712,
-    " 5 Guide: LeSS Metrics with Less Targets (LeSS) \n "
+    empircalProcessControlPopUpText
     , 'left', 5).hide();//paper.popup()
 empiricalProcessControlText.mouseover(function () {
     empiricalProcessControlPopUp.show();
@@ -351,7 +441,7 @@ var queueingTheoryText;
 queueingTheoryText = paper.text((bottomBarHorizontalStartingPosition * 2) + 275, bottomBarVerticalPosition + 25, "Queueing Theory").attr(borderFont);
 
 queueingTheoryPopUp = paper.popup(leftBarHorizontalPosition + 711, leftBarVerticalStartingPosition + 712,
-    " 4 Guide: Transitioning to Feature Teams (LeSS Huge) \n 4 Guide: Understanding Feature Teams (LeSS) \n "
+    queueingTheoryleSSIsScrumPopUpText
     , 'right', 5).hide();//paper.popup()
 queueingTheoryText.mouseover(function () {
     queueingTheoryPopUp.show();
@@ -375,13 +465,14 @@ productBacklogText = paper.text(fullWidthCentreBoxHorizontalPosition + 300, bord
 //Overall PBR             
 var overallPBR;
 overallPBR = paper.rect(fullWidthCentreBoxHorizontalPosition, (borderTopBottomRectangleHeight + centreBoxesOffset) * 2 + 100, largeRectangleLength, allRectangleHeight, bevel)
-    .attr(overallProductBacklogRefinementStyle)
-    .attr({href: "http://less.works/less/framework/product-backlog-refinement.html"});
+    .attr(optionalEventStyle)
+//   .attr({href: "http://less.works/less/framework/product-backlog-refinement.html"});
 
 var overallPBRText;
 overallPBRText = paper.text(fullWidthCentreBoxHorizontalPosition + 300, borderTopBottomRectangleHeight + centreBoxesOffset + 80 + 100, "Overall Product Backlog Refinement (PBR)")
     .attr(centreFont)
     .attr({href: "http://less.works/less/framework/product-backlog-refinement.html"});
+
 
 
 //Team PBR
@@ -397,7 +488,7 @@ teamPBRText = paper.text(fullWidthCentreBoxHorizontalPosition + 150, (borderTopB
 
 var multiTeamteamPBR;
 multiTeamteamPBR = paper.rect(fullWidthCentreBoxHorizontalPosition + 300, (borderTopBottomRectangleHeight + centreBoxesOffset) * 3 + 100, smallRectangleLength, allRectangleHeight, bevel)
-    .attr(multiTeamProductBacklogRefinementStyle)
+    .attr(optionalEventStyle)
     .attr({href: "http://less.works/less/framework/product-backlog-refinement.html"});
 
 var multiTeamteamPBRText;
@@ -409,7 +500,7 @@ multiTeamteamPBRText = paper.text(fullWidthCentreBoxHorizontalPosition + 450, (b
 //Single team design workshops
 var singleTeamDesignWorkshop;
 singleTeamDesignWorkshop = paper.rect(fullWidthCentreBoxHorizontalPosition, (borderTopBottomRectangleHeight + centreBoxesOffset) * 4 + 100, smallRectangleLength, allRectangleHeight, bevel)
-    .attr(designWorkshopStyle)
+    .attr(optionalEventStyle)
     .attr({href: "http://less.works/less/technical-excellence/architecture-design.html#Designworkshopswithagilemodeling"});
 
 var singleTeamDesignWorkshopText;
@@ -421,7 +512,7 @@ singleTeamDesignWorkshopText = paper.text(fullWidthCentreBoxHorizontalPosition +
 //Multi-team design workshops
 var multiTeamDesignWorkshop;
 multiTeamDesignWorkshop = paper.rect(fullWidthCentreBoxHorizontalPosition + 300, (borderTopBottomRectangleHeight + centreBoxesOffset) * 4 + 100, smallRectangleLength, allRectangleHeight, bevel)
-    .attr(designWorkshopStyle)
+    .attr(optionalEventStyle)
     .attr({href: "http://less.works/less/technical-excellence/architecture-design.html#Multi-teamdesignworkshopsforbroaderdesignissues"});
 
 var multiTeamDesignWorkshopText;
@@ -454,7 +545,7 @@ sprintPlanning2aText = paper.text(fullWidthCentreBoxHorizontalPosition + 155, bo
 
 var multiTeamSprintPlanning;
 multiTeamSprintPlanningStyle = paper.rect(fullWidthCentreBoxHorizontalPosition + 300, (borderTopBottomRectangleHeight + centreBoxesOffset) * 6 + 100, smallRectangleLength, allRectangleHeight, bevel)
-    .attr(multiTeamSprintPlanningStyle)
+    .attr(optionalEventStyle)
     .attr({href: "http://less.works/less/framework/sprint-planning-two.html"});
 
 var multiTeamSprintPlanningStyleText;
