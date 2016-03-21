@@ -26,18 +26,45 @@ var smallRectangleLength = 300;
  var queueingTheoryleSSIsScrumPopUpText = "";
  */
 
-//Required event or artefact variables
+//Required event or artefact colour variables
 
 // Product Backlog style info
-var productBacklogRefinementStyle = {
-    fill: "#ddd",
+
+var requiredEventStyle = {
+    fill: "#ccffcc",
     stroke: "#aaa",
     "stroke-width": 1,
     "stroke-linejoin": "round",
     cursor: "pointer"
 };
 
+//Required event or artefact colour variables
+
 // Design workshop style info
+var overallProductBacklogRefinementStyle = {
+    fill: "#99CCCC",
+    stroke: "#aaa",
+    "stroke-width": 1,
+    "stroke-linejoin": "round",
+    cursor: "pointer"
+};
+
+var multiTeamProductBacklogRefinementStyle = {
+    fill: "#99CCCC",
+    stroke: "#aaa",
+    "stroke-width": 1,
+    "stroke-linejoin": "round",
+    cursor: "pointer"
+};
+
+var multiTeamSprintPlanningStyle = {
+    fill: "#99CCCC",
+    stroke: "#aaa",
+    "stroke-width": 1,
+    "stroke-linejoin": "round",
+    cursor: "pointer"
+};
+
 var designWorkshopStyle = {
     fill: "#99CCCC",
     stroke: "#aaa",
@@ -46,16 +73,6 @@ var designWorkshopStyle = {
     cursor: "pointer"
 };
 
-
-var sprintPlanningStyle = {
-    fill: "#ccffcc",
-    stroke: "#aaa",
-    "stroke-width": 1,
-    "stroke-linejoin": "round",
-    cursor: "pointer"
-};
-
-
 var communityStyle = {
     fill: "#f2f2f2",
     stroke: "#aaa",
@@ -63,15 +80,6 @@ var communityStyle = {
     "stroke-linejoin": "round",
     cursor: "pointer"
 };
-
-var reviewReflectionStyle = {
-    fill: "#ccccff",
-    stroke: "#aaa",
-    "stroke-width": 1,
-    "stroke-linejoin": "round",
-    cursor: "pointer"
-};
-
 
 //Principle Colours
 var principleColour = "#A2D7E8";
@@ -139,10 +147,12 @@ improvementBacklogText = paper.text(leftBarHorizontalPosition + borderSideRectan
     .attr(improvementBacklogCustomerValueFlowFont).rotate(textRotation, 162, 125)
     .attr({href: "http://less.works/less/management/improvement_service.html"});
 
+
+//Customer Value arrow
 paper.path([
     'M', 985, 117,
     'L', 985, 885
-]).attr({
+]).attr({ //styling should be moved up
         'stroke-width': 15,
         'stroke': ('white'),
         'arrow-end': 'block-midium-midium',
@@ -160,7 +170,8 @@ customerValueFlowText = paper.text(leftBarHorizontalPosition + borderSideRectang
 //Large Scale Scrum is Scrum. These text offsets need some work
 var largeScaleScrumIsScrum;
 largeScaleScrumIsScrum = paper.rect(topBarHorizontalStartingPosition, topBarVerticalPosition, borderTopBottomRectangleWidth, borderTopBottomRectangleHeight).attr({fill: principleColour});
-var largeScaleScrumIsScrumText = paper.text(topBarHorizontalStartingPosition + topBarHorizontalTextOffset, topBarVerticalPosition + topBarVerticalTextOffset + 100, "Large Scale Scrum Is Scrum").attr(borderFont);
+var largeScaleScrumIsScrumText;
+largeScaleScrumIsScrumText = paper.text(topBarHorizontalStartingPosition + topBarHorizontalTextOffset, topBarVerticalPosition + topBarVerticalTextOffset + 100, "Large Scale Scrum Is Scrum").attr(borderFont);
 // will animate the rectangle colour fade, needs more params .animate({fill: "principleColour"}, 2000);
 
 largeScaleScrumIsScrumPopUp = paper.popup(leftBarHorizontalPosition, leftBarVerticalStartingPosition - 25,
@@ -200,7 +211,8 @@ var continuousImprovementTowardsPerfection;
 continuousImprovementTowardsPerfection = paper.rect(leftBarHorizontalPosition, leftBarVerticalStartingPosition, borderSideRectangleWidth, borderSideRectangleHeight).attr({fill: principleColour});
 
 
-var continuousImprovementTowardsPerfectionText = paper.text(leftBarHorizontalPosition + 100, leftBarVerticalStartingPosition + sideBarVerticalTextOffset, "continuous Improvement \n Towards Perfection")
+var continuousImprovementTowardsPerfectionText;
+continuousImprovementTowardsPerfectionText = paper.text(leftBarHorizontalPosition + 100, leftBarVerticalStartingPosition + sideBarVerticalTextOffset, "continuous Improvement \n Towards Perfection")
     .attr(borderFont).rotate(textRotation, 210, 125);
 
 //.popup(x , y, location , size)
@@ -258,6 +270,7 @@ systemsThinkingText.mouseout(function () {
 //More with LeSS
 var moreWithLeSS;
 moreWithLeSS = paper.rect(rightBarHorizontalPosition, rightBarVerticalStartingPosition, borderSideRectangleWidth, borderSideRectangleHeight).attr({fill: principleColour});
+
 var moreWithLeSSText;
 moreWithLeSSText = paper.text(rightBarHorizontalPosition + 100, rightBarVerticalStartingPosition + sideBarVerticalTextOffset, "More With LeSS")
     .attr(borderFont).rotate(textRotation, 870, 125);
@@ -349,6 +362,7 @@ queueingTheoryText.mouseout(function () {
 
 
 //Centre
+/*
 var productBacklog;
 productBacklog = paper.rect(fullWidthCentreBoxHorizontalPosition, borderTopBottomRectangleHeight + centreBoxesOffset + 100, largeRectangleLength, allRectangleHeight, bevel)
     .attr(productBacklogRefinementStyle)
@@ -357,11 +371,11 @@ productBacklog = paper.rect(fullWidthCentreBoxHorizontalPosition, borderTopBotto
 
 var productBacklogText;
 productBacklogText = paper.text(fullWidthCentreBoxHorizontalPosition + 300, borderTopBottomRectangleHeight + centreBoxesOffset + 125, "One Product Backlog").attr(centreFont).attr({href: "http://less.works/less/framework/product-backlog.html"});
-
+ */
 //Overall PBR             
 var overallPBR;
 overallPBR = paper.rect(fullWidthCentreBoxHorizontalPosition, (borderTopBottomRectangleHeight + centreBoxesOffset) * 2 + 100, largeRectangleLength, allRectangleHeight, bevel)
-    .attr(productBacklogRefinementStyle)
+    .attr(overallProductBacklogRefinementStyle)
     .attr({href: "http://less.works/less/framework/product-backlog-refinement.html"});
 
 var overallPBRText;
@@ -371,23 +385,23 @@ overallPBRText = paper.text(fullWidthCentreBoxHorizontalPosition + 300, borderTo
 
 
 //Team PBR
-var teamPBR1;
-teamPBR1 = paper.rect(fullWidthCentreBoxHorizontalPosition, (borderTopBottomRectangleHeight + centreBoxesOffset) * 3 + 100, smallRectangleLength, allRectangleHeight, bevel)
-    .attr(productBacklogRefinementStyle)
+var teamPBR;
+teamPBR = paper.rect(fullWidthCentreBoxHorizontalPosition, (borderTopBottomRectangleHeight + centreBoxesOffset) * 3 + 100, smallRectangleLength, allRectangleHeight, bevel)
+    .attr(requiredEventStyle)
     .attr({href: "http://less.works/less/framework/product-backlog-refinement.html"});
 
-var teamPBR1Text;
-teamPBR1Text = paper.text(fullWidthCentreBoxHorizontalPosition + 150, (borderTopBottomRectangleHeight + centreBoxesOffset + 8) * 3 + 100, "Team PBR")
+var teamPBRText;
+teamPBRText = paper.text(fullWidthCentreBoxHorizontalPosition + 150, (borderTopBottomRectangleHeight + centreBoxesOffset + 8) * 3 + 100, "Team PBR")
     .attr(centreFont)
     .attr({href: "http://less.works/less/framework/product-backlog-refinement.html"});
 
-var teamPBR2;
-teamPBR2 = paper.rect(fullWidthCentreBoxHorizontalPosition + 300, (borderTopBottomRectangleHeight + centreBoxesOffset) * 3 + 100, smallRectangleLength, allRectangleHeight, bevel)
-    .attr(productBacklogRefinementStyle)
+var multiTeamteamPBR;
+multiTeamteamPBR = paper.rect(fullWidthCentreBoxHorizontalPosition + 300, (borderTopBottomRectangleHeight + centreBoxesOffset) * 3 + 100, smallRectangleLength, allRectangleHeight, bevel)
+    .attr(multiTeamProductBacklogRefinementStyle)
     .attr({href: "http://less.works/less/framework/product-backlog-refinement.html"});
 
-var teamPBR2Text;
-teamPBR2Text = paper.text(fullWidthCentreBoxHorizontalPosition + 450, (borderTopBottomRectangleHeight + centreBoxesOffset + 8) * 3 + 100, "Multi-team PBR")
+var multiTeamteamPBRText;
+multiTeamteamPBRText = paper.text(fullWidthCentreBoxHorizontalPosition + 450, (borderTopBottomRectangleHeight + centreBoxesOffset + 8) * 3 + 100, "Multi-team PBR")
     .attr(centreFont)
     .attr({href: "http://less.works/less/framework/product-backlog-refinement.html"});
 
@@ -419,7 +433,7 @@ multiTeamDesignWorkshopText = paper.text(fullWidthCentreBoxHorizontalPosition + 
 //Sprint Planning
 var sprintPlanning1;
 sprintPlanning1 = paper.rect(fullWidthCentreBoxHorizontalPosition, (borderTopBottomRectangleHeight + centreBoxesOffset) * 5 + 100, largeRectangleLength, allRectangleHeight, bevel)
-    .attr(sprintPlanningStyle)
+    .attr(requiredEventStyle)
     .attr({href: "http://less.works/less/framework/sprint-planning-one.html"});
 
 var sprintPlanning1Text;
@@ -430,7 +444,7 @@ sprintPlanning1Text = paper.text(fullWidthCentreBoxHorizontalPosition + 300, bor
 //teriible variable names, wtf do they mean!
 var sprintPlanning2a;
 sprintPlanning2a = paper.rect(fullWidthCentreBoxHorizontalPosition, (borderTopBottomRectangleHeight + centreBoxesOffset) * 6 + 100, smallRectangleLength, allRectangleHeight, bevel)
-    .attr(sprintPlanningStyle)
+    .attr(requiredEventStyle)
     .attr({href: "http://less.works/less/framework/sprint-planning-two.html"});
 
 var sprintPlanning2aText;
@@ -438,12 +452,13 @@ sprintPlanning2aText = paper.text(fullWidthCentreBoxHorizontalPosition + 155, bo
     .attr(centreFont)
     .attr({href: "http://less.works/less/framework/sprint-planning-two.html"});
 
-var sprintPlanning2b;
-sprintPlanning2b = paper.rect(fullWidthCentreBoxHorizontalPosition + 300, (borderTopBottomRectangleHeight + centreBoxesOffset) * 6 + 100, smallRectangleLength, allRectangleHeight, bevel)
-    .attr(sprintPlanningStyle)
+var multiTeamSprintPlanning;
+multiTeamSprintPlanningStyle = paper.rect(fullWidthCentreBoxHorizontalPosition + 300, (borderTopBottomRectangleHeight + centreBoxesOffset) * 6 + 100, smallRectangleLength, allRectangleHeight, bevel)
+    .attr(multiTeamSprintPlanningStyle)
     .attr({href: "http://less.works/less/framework/sprint-planning-two.html"});
-var sprintPlanning2bText;
-sprintPlanning2bText = paper.text(fullWidthCentreBoxHorizontalPosition + 455, borderTopBottomRectangleHeight + centreBoxesOffset + 300 + 100, "Multi-team Sprint Planning 2")
+
+var multiTeamSprintPlanningStyleText;
+multiTeamSprintPlanningStyleText = paper.text(fullWidthCentreBoxHorizontalPosition + 455, borderTopBottomRectangleHeight + centreBoxesOffset + 300 + 100, "Multi-team Sprint Planning 2")
     .attr(centreFont)
     .attr({href: "http://less.works/less/framework/sprint-planning-two.html"});
 
@@ -539,7 +554,7 @@ teamFourText = paper.text(840, 520, "Team n")
 //Sprint Review
 var sprintReview;
 sprintReview = paper.rect(fullWidthCentreBoxHorizontalPosition, 570 + 100, largeRectangleLength, allRectangleHeight, bevel)
-    .attr(reviewReflectionStyle)
+    .attr(requiredEventStyle)
     .attr({href: "http://less.works/less/framework/sprint-review.html"});
 
 var sprintReviewText;
@@ -550,7 +565,7 @@ sprintReviewText = paper.text(fullWidthCentreBoxHorizontalPosition + 300, border
 //Retrospectives
 var teamOneRetrospective;
 teamOneRetrospective = paper.rect(fullWidthCentreBoxHorizontalPosition, 625 + 100, largeRectangleLength, allRectangleHeight, bevel)
-    .attr(reviewReflectionStyle)
+    .attr(requiredEventStyle)
     .attr({href: "http://less.works/less/framework/retrospective.html"});
 
 var teamOneRetrospectiveText;
@@ -560,7 +575,7 @@ teamOneRetrospectiveText = paper.text(fullWidthCentreBoxHorizontalPosition + 300
 
 var overallRetrospective;
 overallRetrospective = paper.rect(fullWidthCentreBoxHorizontalPosition, 680 + 100, largeRectangleLength, allRectangleHeight, bevel)
-    .attr(reviewReflectionStyle)
+    .attr(requiredEventStyle)
     .attr({href: "http://less.works/less/framework/overall-retrospective.html"});
 var overalRetrospectiveText;
 overalRetrospectiveText = paper.text(fullWidthCentreBoxHorizontalPosition + 300, borderTopBottomRectangleHeight + centreBoxesOffset + 650 + 100, "Overal Retrospective")
