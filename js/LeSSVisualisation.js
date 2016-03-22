@@ -81,9 +81,13 @@ moreWithLeSSPopUpText = " 8 Guide: Area Backlogs (LeSS Huge) \n  \
  2 Guide: Rotate infrastructure work (LeSS) \n  \
  2 Guide: Rotating Team representatives (LeSS) \n  \
  12 Guide: Scouts (LeSS) \n  \
- 12 Guide: Travelers (LeSS) \n  \ ";
+ 12 Guide: Travelers (LeSS)";
 
-var transparencyPopUpText = "";
+var transparencyPopUpText = " Boilerplate text 2 Guide: Review Bazaar (LeSS) \n  \
+ 2 Guide: Rotate infrastructure work (LeSS) \n  \
+ 2 Guide: Rotating Team representatives (LeSS) \n  \
+ 12 Guide: Scouts (LeSS) \n  \
+ 12 Guide: Travelers (LeSS";
 
 var customerCentricPopUpText;
 customerCentricPopUpText = " 7 Guide: Don’t Be Nice  (LeSS) \n 8 Guide: More Outcomes, less Outputs  (LeSS) \n 7 Guide: Prioritization over Clarification (LeSS) \n 6.5 Guide: Product over Project or Program (LeSS) \n 2 Guide: Teams specialize in customer (not technical) areas (LeSS) \n 7 Guide: Who are those Users/Customers? (LeSS) \n";
@@ -336,17 +340,7 @@ largeScaleScrumIsScrumText = paper.text(topBarHorizontalStartingPosition + topBa
     .attr(borderFont)
     .attr(largeScaleScrumIsScrumLink);
 
-// will animate the rectangle colour fade, needs more params .animate({fill: "principleColour"}, 2000);
 
-largeScaleScrumIsScrumPopUp = paper.popup(leftBarHorizontalPosition, leftBarVerticalStartingPosition - 25,
-    largeScaleScrumIsScrumPopUpText
-    , 'left', 5).hide();//paper.popup()
-largeScaleScrumIsScrumText.mouseover(function () {
-    largeScaleScrumIsScrumPopUp.show();
-});
-largeScaleScrumIsScrumText.mouseout(function () {
-    largeScaleScrumIsScrumPopUp.hide();
-});
 
 
 //too much misuing of constants. Need to understand which ones can have the same values and which are not. Feel like i am in a half way house, some elements move easily others are too manual
@@ -361,17 +355,6 @@ transparencyText = paper.text((topBarHorizontalStartingPosition + 350) + topBarH
     .attr(borderFont)
     .attr(transparencyLink);
 
-transparencyPopUp = paper.popup(leftBarHorizontalPosition + 711, leftBarVerticalStartingPosition - 25,
-    transparencyPopUpText
-    , 'right', 5).hide();//paper.popup()
-transparencyText.mouseover(function () {
-    transparencyPopUp.show();
-});
-transparencyText.mouseout(function () {
-    transparencyPopUp.hide();
-});
-
-
 //Left Bar
 //Continuous Improvement
 var continuousImprovementTowardsPerfection;
@@ -385,19 +368,6 @@ continuousImprovementTowardsPerfectionText = paper.text(leftBarHorizontalPositio
     .attr(continuousImprovementTowardsPerfectionLink);
 ;
 
-//.popup(x , y, location , size)
-
-continuousImprovementTowardsPerfectionPopUp = paper.popup(leftBarHorizontalPosition, leftBarVerticalStartingPosition + 50,
-    continuousImprovementTowardsPerfectionPopUpText
-    , 'left', 5).hide();//paper.popup()
-continuousImprovementTowardsPerfectionText.mouseover(function () {
-    continuousImprovementTowardsPerfectionPopUp.show();
-});
-continuousImprovementTowardsPerfectionText.mouseout(function () {
-    continuousImprovementTowardsPerfectionPopUp.hide();
-});
-
-
 //Lean Thinking
 var leanThinking;
 leanThinking = paper.rect(leftBarHorizontalPosition, leftBarVerticalStartingPosition + borderSideRectangleHeight, borderSideRectangleWidth, borderSideRectangleHeight).attr({fill: principleColour})
@@ -407,16 +377,6 @@ var leanThinkingText;
 leanThinkingText = paper.text(leftBarHorizontalPosition + borderSideRectangleHeight + 100, leftBarVerticalStartingPosition + sideBarVerticalTextOffset, "Lean Thinking	")
     .attr(borderFont).rotate(textRotation, 210, 125)
     .attr(leanThinkingLink);
-
-leanThinkingPopUp = paper.popup(leftBarHorizontalPosition, leftBarVerticalStartingPosition + 300,
-    leanThinkingPopUpText
-    , 'left', 5).hide();//paper.popup()
-leanThinkingText.mouseover(function () {
-    leanThinkingPopUp.show();
-});
-leanThinkingText.mouseout(function () {
-    leanThinkingPopUp.hide();
-});
 
 
 //Systems Thinking
@@ -428,16 +388,6 @@ var systemsThinkingText;
 systemsThinkingText = paper.text(leftBarHorizontalPosition + (borderSideRectangleHeight * 2) + 100, leftBarVerticalStartingPosition + sideBarVerticalTextOffset, "Systems Thinking	")
     .attr(borderFont).rotate(textRotation, 210, 125)
     .attr(systemsThinkingLink);
-
-systemsThinkingPopUp = paper.popup(leftBarHorizontalPosition, leftBarVerticalStartingPosition + 550,
-    systemsThinkingPopUpText
-    , 'left', 5).hide();//paper.popup()
-systemsThinkingText.mouseover(function () {
-    systemsThinkingPopUp.show();
-});
-systemsThinkingText.mouseout(function () {
-    systemsThinkingPopUp.hide();
-});
 
 
 //Right Bar
@@ -451,16 +401,6 @@ moreWithLeSSText = paper.text(rightBarHorizontalPosition + 100, rightBarVertical
     .attr(borderFont).rotate(textRotation, 870, 125)
     .attr(moreWithLessLink);
 
-moreWithLeSSPopUp = paper.popup(leftBarHorizontalPosition + 711, leftBarVerticalStartingPosition + 50,
-    moreWithLeSSPopUpText
-    , 'right', 5).hide();//paper.popup()
-moreWithLeSSText.mouseover(function () {
-    moreWithLeSSPopUp.show();
-});
-moreWithLeSSText.mouseout(function () {
-    moreWithLeSSPopUp.hide();
-});
-
 
 //Whole Product Focus
 var wholeProductFocus;
@@ -472,15 +412,6 @@ wholeProductFocusText = paper.text(rightBarHorizontalPosition + borderSideRectan
     .attr(borderFont).rotate(textRotation, 870, 125)
     .attr(wholeProductFocusLink);
 
-wholeProductFocusPopUp = paper.popup(leftBarHorizontalPosition + 711, leftBarVerticalStartingPosition + 300,
-    wholeProductFocusPopUpText
-    , 'right', 5).hide();//paper.popup()
-wholeProductFocusText.mouseover(function () {
-    wholeProductFocusPopUp.show();
-});
-wholeProductFocusText.mouseout(function () {
-    wholeProductFocusPopUp.hide();
-});
 
 
 //Customer Centric
@@ -492,16 +423,6 @@ var customerCentricText;
 customerCentricText = paper.text(rightBarHorizontalPosition + (borderSideRectangleHeight * 2) + 100, rightBarVerticalStartingPosition + sideBarVerticalTextOffset, "Customer Centric")
     .attr(borderFont).rotate(textRotation, 870, 125)
     .attr(customerCentricLink);
-
-customerCentricPopUp = paper.popup(leftBarHorizontalPosition + 711, leftBarVerticalStartingPosition + 550,
-    customerCentricPopUpText
-    , 'right', 5).hide();//paper.popup()
-customerCentricText.mouseover(function () {
-    customerCentricPopUp.show();
-});
-customerCentricText.mouseout(function () {
-    customerCentricPopUp.hide();
-});
 
 
 //Bottom Bar
@@ -516,15 +437,6 @@ empiricalProcessControlText = paper.text(bottomBarHorizontalStartingPosition + 1
     .attr(borderFont)
     .attr(empiricalProcessControlLink);
 
-empiricalProcessControlPopUp = paper.popup(leftBarHorizontalPosition, leftBarVerticalStartingPosition + 712,
-    empircalProcessControlPopUpText
-    , 'left', 5).hide();//paper.popup()
-empiricalProcessControlText.mouseover(function () {
-    empiricalProcessControlPopUp.show();
-});
-empiricalProcessControlText.mouseout(function () {
-    empiricalProcessControlPopUp.hide();
-});
 
 
 //Queueing theory Need to sort our text offsets
@@ -536,16 +448,6 @@ var queueingTheoryText;
 queueingTheoryText = paper.text((bottomBarHorizontalStartingPosition * 2) + 275, bottomBarVerticalPosition + 25, "Queueing Theory")
     .attr(borderFont)
     .attr(queueingTheoryLink);
-
-queueingTheoryPopUp = paper.popup(leftBarHorizontalPosition + 711, leftBarVerticalStartingPosition + 712,
-    queueingTheoryleSSIsScrumPopUpText
-    , 'right', 5).hide();//paper.popup()
-queueingTheoryText.mouseover(function () {
-    queueingTheoryPopUp.show();
-});
-queueingTheoryText.mouseout(function () {
-    queueingTheoryPopUp.hide();
-});
 
 
 //Centre
@@ -748,3 +650,111 @@ var overalRetrospectiveText;
 overalRetrospectiveText = paper.text(fullWidthCentreBoxHorizontalPosition + 300, borderTopBottomRectangleHeight + centreBoxesOffset + 650 + 100, "Overal Retrospective")
     .attr(centreFont)
     .attr({href: "http://less.works/less/framework/overall-retrospective.html"});
+
+
+// Popups at the bottom so they appear on top
+
+largeScaleScrumIsScrumPopUp = paper.popup(leftBarHorizontalPosition * 1.5, leftBarVerticalStartingPosition,
+    largeScaleScrumIsScrumPopUpText
+    , 'down', 5).hide();//paper.popup()
+largeScaleScrumIsScrumText.mouseover(function () {
+    largeScaleScrumIsScrumPopUp.show();
+});
+largeScaleScrumIsScrumText.mouseout(function () {
+    largeScaleScrumIsScrumPopUp.hide();
+});
+
+transparencyPopUp = paper.popup(leftBarHorizontalPosition * 3.2, leftBarVerticalStartingPosition,
+    transparencyPopUpText
+    , 'down', 5).hide();//paper.popup()
+transparencyText.mouseover(function () {
+    transparencyPopUp.show();
+});
+transparencyText.mouseout(function () {
+    transparencyPopUp.hide();
+});
+
+continuousImprovementTowardsPerfectionPopUp = paper.popup(leftBarHorizontalPosition + 50, leftBarVerticalStartingPosition + 50,
+    continuousImprovementTowardsPerfectionPopUpText
+    , 'right', 5).hide();//paper.popup()
+continuousImprovementTowardsPerfectionText.mouseover(function () {
+    continuousImprovementTowardsPerfectionPopUp.show();
+});
+continuousImprovementTowardsPerfectionText.mouseout(function () {
+    continuousImprovementTowardsPerfectionPopUp.hide();
+});
+
+
+leanThinkingPopUp = paper.popup(leftBarHorizontalPosition + 50, leftBarVerticalStartingPosition + 300,
+    leanThinkingPopUpText
+    , 'right', 5).hide();//paper.popup()
+leanThinkingText.mouseover(function () {
+    leanThinkingPopUp.show();
+});
+leanThinkingText.mouseout(function () {
+    leanThinkingPopUp.hide();
+});
+
+
+systemsThinkingPopUp = paper.popup(leftBarHorizontalPosition + 50, leftBarVerticalStartingPosition + 550,
+    systemsThinkingPopUpText
+    , 'right', 5).hide();//paper.popup()
+systemsThinkingText.mouseover(function () {
+    systemsThinkingPopUp.show();
+});
+systemsThinkingText.mouseout(function () {
+    systemsThinkingPopUp.hide();
+});
+
+moreWithLeSSPopUp = paper.popup(leftBarHorizontalPosition + 661, leftBarVerticalStartingPosition + 100,
+    moreWithLeSSPopUpText
+    , 'left', 10).hide();//paper.popup()
+moreWithLeSSText.mouseover(function () {
+    moreWithLeSSPopUp.show();
+});
+moreWithLeSSText.mouseout(function () {
+    moreWithLeSSPopUp.hide();
+});
+
+
+wholeProductFocusPopUp = paper.popup(leftBarHorizontalPosition + 661, leftBarVerticalStartingPosition + 300,
+    wholeProductFocusPopUpText
+    , 'left', 5).hide();//paper.popup()
+wholeProductFocusText.mouseover(function () {
+    wholeProductFocusPopUp.show();
+});
+wholeProductFocusText.mouseout(function () {
+    wholeProductFocusPopUp.hide();
+});
+
+
+customerCentricPopUp = paper.popup(leftBarHorizontalPosition + 661, leftBarVerticalStartingPosition + 550,
+    customerCentricPopUpText
+    , 'left', 5).hide();//paper.popup()
+customerCentricText.mouseover(function () {
+    customerCentricPopUp.show();
+});
+customerCentricText.mouseout(function () {
+    customerCentricPopUp.hide();
+});
+
+
+empiricalProcessControlPopUp = paper.popup(leftBarHorizontalPosition + 150, leftBarVerticalStartingPosition + 688,
+    empircalProcessControlPopUpText
+    , 'up', 5).hide();//paper.popup()
+empiricalProcessControlText.mouseover(function () {
+    empiricalProcessControlPopUp.show();
+});
+empiricalProcessControlText.mouseout(function () {
+    empiricalProcessControlPopUp.hide();
+});
+
+queueingTheoryPopUp = paper.popup(leftBarHorizontalPosition + 515, leftBarVerticalStartingPosition + 688,
+    queueingTheoryleSSIsScrumPopUpText
+    , 'up', 5).hide();//paper.popup()
+queueingTheoryText.mouseover(function () {
+    queueingTheoryPopUp.show();
+});
+queueingTheoryText.mouseout(function () {
+    queueingTheoryPopUp.hide();
+});
